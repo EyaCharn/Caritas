@@ -1,0 +1,12 @@
+solidarity_homepage:
+    path:     /
+    defaults: { _controller: SolidarityBundle:Default:index }
+main_homepageback:
+    path:     /IndexBack
+    defaults: { _controller: SolidarityBundle:Default:indexBack }
+
+main_homepagefront:
+    path:     /Indexfront
+    defaults: { _controller: SolidarityBundle:Default:indexfront }
+
+

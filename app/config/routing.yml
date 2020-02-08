@@ -1,0 +1,8 @@
+solidarity:
+    resource: "@SolidarityBundle/Resources/config/routing.yml"
+    prefix:   /solidarity
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
