@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52a48e56-100d-41fa-ac31-4c1c1361cbc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/css/chocolat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/css/flexslider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/fonts/AllertaStencil-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/fonts/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/abt1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/bnr3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/e1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/e2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/e3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/e4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/e5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/g9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/h1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/h2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/left-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/nav-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/right-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/social.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/t1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/t2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/t3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/t4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/top-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/images/w1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/js/easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/js/jquery.chocolat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/js/jquery.flexslider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/js/modernizr.custom.97074.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/FrontEnd/js/move-top.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Back/Back.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Back/Back.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Front/Front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Front/Front.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SolidarityBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolidarityBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SolidarityBundle/Resources/views/Default/indexfront.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolidarityBundle/Resources/views/Default/indexfront.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +141,7 @@
       <workItem from="1581159389604" duration="14285000" />
       <workItem from="1581191023467" duration="8048000" />
       <workItem from="1581266062376" duration="8048000" />
-      <workItem from="1581359997693" duration="3255000" />
+      <workItem from="1581359997693" duration="3913000" />
     </task>
     <servers />
   </component>
