@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52a48e56-100d-41fa-ac31-4c1c1361cbc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SolidarityBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolidarityBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="52a48e56-100d-41fa-ac31-4c1c1361cbc5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,9 +26,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -75,6 +68,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XWPdVUEkqUas9oVzZ8MAaNxNKr" />
@@ -109,6 +103,11 @@
       <command value="c dump-autoload" />
       <command value="s generate:bundle" />
       <command value="s server:run" />
+      <command value="s doctrine:database:create" />
+      <command value="s doctrine:generate:entities Appbundle:User.php" />
+      <command value="s doctrine:generate:entities AppBundle:User.php" />
+      <command value="s doctrine:generate:entities AppBundle:User" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
   <component name="ServiceViewManager">
@@ -135,7 +134,8 @@
       <updated>1581158964763</updated>
       <workItem from="1581159389604" duration="14285000" />
       <workItem from="1581191023467" duration="8048000" />
-      <workItem from="1581359768569" duration="315000" />
+      <workItem from="1581266062376" duration="8048000" />
+      <workItem from="1581359997693" duration="640000" />
     </task>
     <servers />
   </component>
@@ -143,41 +143,57 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="407" y="241" key="ComposerCompositePathDialog" timestamp="1581162988480">
+    <state x="407" y="241" key="ComposerCompositePathDialog" timestamp="1581266359559">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581162988480" />
-    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1581166801588">
+    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581266359559" />
+    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1581266376790">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581166801588" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1581167719702">
+    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581266376790" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1581278926204">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581167719702" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1581167719701">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581278926204" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1581278926203">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581167719701" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1581167719700">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581278926203" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1581278926202">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581167719700" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1581167719702">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581278926202" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1581278926203">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581167719702" />
-    <state x="184" y="5" key="SettingsEditor" timestamp="1581163057712">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581278926203" />
+    <state x="445" y="199" key="NewPhpClassDialog" timestamp="1581267273571">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581163057712" />
-    <state x="495" y="265" key="SymfonyPathDialog" timestamp="1581163023570">
+    <state x="445" y="199" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1581267273571" />
+    <state x="518" y="296" key="NewPhpFileDialog" timestamp="1581272625823">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="495" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581163023570" />
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1581167036867">
+    <state x="518" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1581272625823" />
+    <state x="184" y="5" key="SettingsEditor" timestamp="1581266387663">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1581167036867" />
+    <state x="184" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581266387663" />
+    <state x="495" y="265" key="SymfonyPathDialog" timestamp="1581266378159">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="495" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581266378159" />
+    <state x="390" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1581360038769">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581360038769" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1581272434306">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1581272434306" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1581268994538">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581268994538" />
   </component>
 </project>
