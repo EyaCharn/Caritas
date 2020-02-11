@@ -3,6 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@SolidarityBundle/Resources/config/services.yml" }
+    - { resource: "@ActualiteBundle/Resources/config/services.yml" }
 
 
 

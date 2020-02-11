@@ -1,3 +1,11 @@
+actualite_actualite:
+    resource: "@ActualiteBundle/Controller/ActualiteController.php"
+    type:     annotation
+
+actualite:
+    resource: "@ActualiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
 solidarity:
     resource: "@SolidarityBundle/Resources/config/routing.yml"
     prefix:   /solidarity
