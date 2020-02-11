@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new SolidarityBundle\SolidarityBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new EvenementBundle\EvenementBundle(),
+            new ActualiteBundle\ActualiteBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
