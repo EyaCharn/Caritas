@@ -14,4 +14,8 @@ class DefaultController extends Controller
     {
         return $this->render('@Solidarity/Default/indexfront.html.twig');
     }
+    public function inscriptionAction()
+    {
+        return $this->render('@Solidarity/Default/inscription.html.twig');
+    }
 }

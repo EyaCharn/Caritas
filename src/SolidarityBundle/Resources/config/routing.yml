@@ -8,5 +8,9 @@ main_homepageback:
 main_homepagefront:
     path:     /Indexfront
     defaults: { _controller: SolidarityBundle:Default:indexfront }
+main_inscriptionfront:
+    path:     /inscription
+    defaults: { _controller: SolidarityBundle:Default:inscription }
+
 
 
