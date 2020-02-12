@@ -1,29 +1,8 @@
 
 {% extends 'Front/Front.html.twig' %}
 {% block content %}
-    <div class="head" id="home">
-        <div class="container">
-            <div class="head-top">
-                <div class="col-md-6 h-left">
-                    <p>+123 456 7897 , +132 567 8977</p>
-                </div>
-                <div class="col-md-6 h-right">
-                    <ul>
-                        <li><a href="#"><span class="fb"> </span></a></li>
-                        <li><a href="#"><span class="twit"> </span></a></li>
-                        <li><a href="#"><span class="pin"> </span></a></li>
-                        <li><a href="#"><span class="rss"> </span></a></li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-    <!--head-->
-    <!--header-->
 
-    <!--//header-->
-    <!--banner-starts-->
+  
     <div class="banner">
         <div class="container">
             <div class="banner-top">
@@ -56,7 +35,19 @@
     </div>
     <!--banner-end-->
     <!--FlexSlider-->
-
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <!--End-slider-script-->
     <!--welcome-starts-->
     <div class="welcome">
         <div class="container">
