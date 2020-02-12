@@ -52,10 +52,32 @@
 {% block content %}
     <h1>Hebergement citoyen</h1>
 
-    {{ form_start(form) }}
+    <div class="container" style="width: 35%;">
+        {{ form_start(form) }}
+            <div class="form-group">
+                {{ form_label(form.dureeMax, 'Duree Maximale: ') }}
+                {{ form_widget(form.dureeMax, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.adresse, 'Addresse: ') }}
+                {{ form_widget(form.adresse, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.nbPlaces, 'Nombre des places: ') }}
+                {{ form_widget(form.nbPlaces, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.descriptionLogement, 'Description du logement: ') }}
+                {{ form_widget(form.descriptionLogement, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.reglementInterieur, 'Réglement interieur: ') }}
+                {{ form_widget(form.reglementInterieur, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <input type="submit" class="btn" value="Create" />
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+        {{ form_end(form) }}
+    </div>
 {% endblock %}
     {% block footer %}
         <div class="footer">

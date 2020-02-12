@@ -3,6 +3,7 @@
 namespace ServiceBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +14,9 @@ class hebergementType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('dureeMax')->add('adresse')->add('nbPlaces')->add('descriptionLogement')->add('reglementInterieur');
+        $builder->add('dureeMax')->add('adresse')->add('nbPlaces')
+            ->add('descriptionLogement', TextareaType::class)
+            ->add('reglementInterieur', TextareaType::class);
     }/**
      * {@inheritdoc}
      */

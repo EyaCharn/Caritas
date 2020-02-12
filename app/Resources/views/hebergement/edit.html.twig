@@ -52,22 +52,44 @@
     {% block content %}
     <h1>Hebergement edit</h1>
 
+        <div class="container" style="width: 25%">
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
+        <div class="form-group">
+            {{ form_label(edit_form.dureeMax, 'Duree Maximale: ') }}
+            {{ form_widget(edit_form.dureeMax, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.adresse, 'Addresse: ') }}
+            {{ form_widget(edit_form.adresse, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.nbPlaces, 'Nombre des places: ') }}
+            {{ form_widget(edit_form.nbPlaces, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.descriptionLogement, 'Description du logement: ') }}
+            {{ form_widget(edit_form.descriptionLogement, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.reglementInterieur, 'Réglement interieur: ') }}
+            {{ form_widget(edit_form.reglementInterieur, {'attr': {'class': 'form-control'}}) }}
+        </div>
         <input type="submit" value="Edit" />
+        {{ form_widget(edit_form) }}
     {{ form_end(edit_form) }}
+            <ul>
+                <li>
+                    <a href="{{ path('hebergement_index') }}">Back to the list</a>
+                </li>
+                <li>
+                    {{ form_start(delete_form) }}
+                    <input type="submit" value="Delete">
+                    {{ form_end(delete_form) }}
+                </li>
+            </ul>
+        </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('hebergement_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-{% endblock %}
+    {% endblock %}
     {% block footer %}
         <div class="footer">
             <div class="container">
