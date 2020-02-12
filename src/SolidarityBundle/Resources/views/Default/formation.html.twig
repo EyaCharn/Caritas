@@ -1,0 +1,154 @@
+{% extends 'Front/Front.html.twig' %}
+{% block content %}
+<style>
+    .container {
+        position: relative;
+        width: 50%;
+    }
+
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: left;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+    }
+
+    .container:hover .image {
+        opacity: 0.3;
+    }
+
+    .container:hover .middle {
+        opacity: 1;
+    }
+
+    .text {
+        background-color: orange;
+        color: white;
+        font-size: 16px;
+        padding: 16px 32px;
+    }
+    a.bouton5 {
+        display: block;
+        width: 150px;
+        line-height: 40px;
+        background: url(http://2.bp.blogspot.com/-i0uDtWEeyLE/VoUt32pSFkI/AAAAAAAADUM/obESNovWmiM/s1600/bouton-orange.png);
+        color: #000000;
+        -webkit-transition: all 0.7s ease-out 0s;
+        -moz-transition: all 0.7s ease-out 0s;
+        transition: all 0.7s ease-out 0s;
+        font-weight: bold;
+        text-align: center;
+    }
+    a.bouton5:hover {
+        background: url(http://3.bp.blogspot.com/-FzfYdG3-fyU/VoUt30PxyfI/AAAAAAAADUI/6R-bHnZI630/s1600/bouton-orange2.png);
+        color: #ffffff;
+</style>
+</head>
+<body>
+<!--head-->
+<div class="head" id="home">
+    <div class="container">
+        <div class="head-top">
+            <div class="col-md-6 h-left">
+                <p>+123 456 7897 , +132 567 8977</p>
+            </div>
+            <div class="col-md-6 h-right">
+                <ul>
+                    <li><a href="#"><span class="fb"> </span></a></li>
+                    <li><a href="#"><span class="twit"> </span></a></li>
+                    <li><a href="#"><span class="pin"> </span></a></li>
+                    <li><a href="#"><span class="rss"> </span></a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <div class="container">
+        <div class="banner-top">
+
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- page details -->
+
+<!-- //page details -->
+
+<!-- menu -->
+<a href="http://www.adresse-de-votre-choix.com/" class="bouton5">Creer une Formation</a>
+
+<section class="portfolio py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="title-section text-center mb-md-5 mb-4 editContent">
+            <h3 class="editContent  w3ls-title mb-3">Nos <span class="editContent" style="outline: none; cursor: inherit;">Formations</span></h3>
+            <p class="editContent  titile-para-text mx-auto">La crise de l'accueil des réfugiés a révélé de réels besoins en matière de formation et de compétences. Donc l'interet porté a cette rubrique est de permettre aux volontaire de s'investir a cette cause et de proposer des formations qu'ils pourront effectuer afin de contribuer à l'egalité des chances des refugiés.</p>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="gallery-demo">
+                    <a href="#gal1">
+                        <img src="images/fr.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
+                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Formation Français - <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 mt-md-0 mt-4">
+                <div class="gallery-demo">
+                    <a href="#gal2">
+                        <img src="images/plombier.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
+                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Formation Plomberie - <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 mt-md-0 mt-4">
+                <div class="gallery-demo">
+                    <a href="#gal3">
+                        <img src="images/info.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
+                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Formation Informatique <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-md-5">
+            <div class="col-md-4 mt-md-0 mt-4">
+                <div class="gallery-demo">
+                    <a href="#gal4">
+                        <img src="images/menuiserie.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
+                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Formation Menuiserie <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 mt-md-0 mt-4">
+                <div class="gallery-demo">
+                    <a href="#gal5">
+                        <img src="images/mecanicien.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
+                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Formation Mecanicien <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 mt-md-0 mt-4">
+                <div class="gallery-demo">
+                    <a href="#gal6">
+                        <img src="images/anglais.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
+                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Formation Anglais<span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

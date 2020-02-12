@@ -1,15 +1,3 @@
-reclamation_traitement:
-    resource: "@ReclamationBundle/Controller/TraitementController.php"
-    type:     annotation
-
-reclamation_reclamation:
-    resource: "@ReclamationBundle/Controller/ReclamationController.php"
-    type:     annotation
-
-reclamation:
-    resource: "@ReclamationBundle/Resources/config/routing.yml"
-    prefix:   /
-
 evenement_participation:
     resource: "@EvenementBundle/Controller/participationController.php"
     type:     annotation
@@ -18,9 +6,6 @@ evenement_evenement:
     resource: "@EvenementBundle/Controller/evenementController.php"
     type:     annotation
 
-evenement:
-    resource: "@EvenementBundle/Resources/config/routing.yml"
-    prefix:   /
 
 
 
