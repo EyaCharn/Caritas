@@ -49,7 +49,7 @@ class DefaultController extends Controller
     }
     public function typoAction()
     {
-        return $this->render('@Solidarity/Default/dtypohtml.twig');
+        return $this->render('@Solidarity/Default/typohtml.twig');
     }
     public function hebergementAction()
     {
