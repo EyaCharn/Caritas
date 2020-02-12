@@ -34,9 +34,6 @@ evenement_evenement:
     resource: "@EvenementBundle/Controller/evenementController.php"
     type:     annotation
 
-evenement:
-    resource: "@EvenementBundle/Resources/config/routing.yml"
-    prefix:   /
 
 
 

@@ -1,8 +1,7 @@
-{% extends 'base.html.twig' %}
+{% extends ':Back:Back.html.twig' %}
+{% block content %}
 
-{% block body %}
     <h1>Evenement creation</h1>
-
     {{ form_start(form) }}
         {{ form_widget(form) }}
         <input type="submit" value="Create" />
@@ -13,4 +12,5 @@
             <a href="{{ path('evenement_index') }}">Back to the list</a>
         </li>
     </ul>
+
 {% endblock %}
