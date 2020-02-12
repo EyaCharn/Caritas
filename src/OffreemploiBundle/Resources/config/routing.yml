@@ -1,0 +1,3 @@
+offreemploi_homepage:
+    path:     /
+    defaults: { _controller: OffreemploiBundle:Default:index }
