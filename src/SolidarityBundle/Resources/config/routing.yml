@@ -11,6 +11,38 @@ main_homepagefront:
 main_inscriptionfront:
     path:     /inscription
     defaults: { _controller: SolidarityBundle:Default:inscription }
+main_formationfront:
+    path:     /formation
+    defaults: { _controller: SolidarityBundle:Default:formation }
+main_donmaterielfront:
+    path:     /donmateriel
+    defaults: { _controller: SolidarityBundle:Default:donmateriel }
+main_contactfront:
+    path:     /contact
+    defaults: { _controller: SolidarityBundle:Default:contact }
+main_donfront:
+    path:     /don
+    defaults: { _controller: SolidarityBundle:Default:don }
+main_aboutfront:
+    path:     /about
+    defaults: { _controller: SolidarityBundle:Default:about }
+main_offreemploifront:
+    path:     /offreemploi
+    defaults: { _controller: SolidarityBundle:Default:offreemploi }
+main_galleryfront:
+    path:     /gallery
+    defaults: { _controller: SolidarityBundle:Default:gallery}
+main_typofront:
+    path:     /typo
+    defaults: { _controller: SolidarityBundle:Default:typo}
+main_hebergementfront:
+    path:     /hebergement
+    defaults: { _controller: SolidarityBundle:Default:hebergement}
+
+
+
+
+
 
 
 
