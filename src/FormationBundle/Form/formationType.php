@@ -13,7 +13,12 @@ class formationType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titre')->add('type')->add('date')->add('lieu')->add('nbplaces')->add('cV')->add('description');
+        $builder->add('titre')
+            ->add('date')
+            ->add('lieu')
+            ->add('nbplaces')
+            ->add('cV')
+            ->add('description');
     }/**
      * {@inheritdoc}
      */
