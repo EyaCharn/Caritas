@@ -1,31 +1,3 @@
-offreemploi_offreemploi:
-    resource: "@OffreemploiBundle/Controller/offreemploiController.php"
-    type:     annotation
-
-formation_formation:
-    resource: "@FormationBundle/Controller/formationController.php"
-    type:     annotation
-
-offreemploi:
-    resource: "@OffreemploiBundle/Resources/config/routing.yml"
-    prefix:   /
-
-formation:
-    resource: "@FormationBundle/Resources/config/routing.yml"
-    prefix:   /
-
-service_servicesante:
-    resource: "@ServiceBundle/Controller/servicesanteController.php"
-    type:     annotation
-
-service_hebergement:
-    resource: "@ServiceBundle/Controller/hebergementController.php"
-    type:     annotation
-
-service:
-    resource: "@ServiceBundle/Resources/config/routing.yml"
-    prefix:   /
-
 evenement_participation:
     resource: "@EvenementBundle/Controller/participationController.php"
     type:     annotation

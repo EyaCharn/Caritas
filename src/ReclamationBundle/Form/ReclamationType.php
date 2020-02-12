@@ -1,31 +1,26 @@
 <?php
 
-namespace FormationBundle\Form;
+namespace ReclamationBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class formationType extends AbstractType
+class ReclamationType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titre')
-            ->add('date')
-            ->add('lieu')
-            ->add('nbplaces')
-            ->add('cV')
-            ->add('description');
+        $builder->add('description')->add('userclaimer');
     }/**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'FormationBundle\Entity\formation'
+            'data_class' => 'ReclamationBundle\Entity\Reclamation'
         ));
     }
 
@@ -34,7 +29,7 @@ class formationType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'formationbundle_formation';
+        return 'reclamationbundle_reclamation';
     }
 
 

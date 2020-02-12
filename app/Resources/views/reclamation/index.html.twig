@@ -1,0 +1,48 @@
+{% extends 'Back/Back.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Reclamation Table</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Claimdate</th>
+                <th>Userclaimed</th>
+                <th>Userclaimer</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for reclamation in reclamations %}
+                <tr>
+                    <td><a href="{{ path('reclamation_show', { 'id': reclamation.id }) }}">{{ reclamation.id }}</a></td>
+                    <td>{{ reclamation.description }}</td>
+                    <td>{% if reclamation.claimdate %}{{ reclamation.claimdate|date('Y-m-d') }}{% endif %}</td>
+                    <td>{{ reclamation.userclaimed }}</td>
+                    <td>{{ reclamation.userclaimer }}</td>
+                    <td>
+
+                        <a href="{{ path('reclamation_show', { 'id': reclamation.id }) }}">show</a>
+                    </td>
+                    <td>
+                        <a href="{{ path('traitement_new') }}">edit</a>
+
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+
+        <ul>
+            <li>
+                <a href="{{ path('reclamation_new') }}">Create a new reclamation</a>
+            </li>
+        </ul>
+
+    </div>
+{% endblock %}

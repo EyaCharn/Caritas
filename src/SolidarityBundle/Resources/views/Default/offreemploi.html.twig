@@ -1,11 +1,84 @@
 {% extends 'Front/Front.html.twig' %}
 {% block content %}
-<div class="banner">
-    <div class="container">
-        <div class="banner-top">
+    <style>
+        .container {
+            position: relative;
+            width: 50%;
+        }
 
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: left;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%)
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: orange;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+        a.bouton5 {
+            display: block;
+            width: 150px;
+            line-height: 40px;
+            background: url(http://2.bp.blogspot.com/-i0uDtWEeyLE/VoUt32pSFkI/AAAAAAAADUM/obESNovWmiM/s1600/bouton-orange.png);
+            color: #000000;
+            -webkit-transition: all 0.7s ease-out 0s;
+            -moz-transition: all 0.7s ease-out 0s;
+            transition: all 0.7s ease-out 0s;
+            font-weight: bold;
+            text-align: center;
+        }
+        a.bouton5:hover {
+            background: url(http://3.bp.blogspot.com/-FzfYdG3-fyU/VoUt30PxyfI/AAAAAAAADUI/6R-bHnZI630/s1600/bouton-orange2.png);
+            color: #ffffff;
+    </style>
+    </head>
+<body>
+<!--head-->
+<div class="head" id="home">
+    <div class="container">
+        <div class="head-top">
+            <div class="col-md-6 h-left">
+                <p>+123 456 7897 , +132 567 8977</p>
+            </div>
+            <div class="col-md-6 h-right">
+                <ul>
+                    <li><a href="#"><span class="fb"> </span></a></li>
+                    <li><a href="#"><span class="twit"> </span></a></li>
+                    <li><a href="#"><span class="pin"> </span></a></li>
+                    <li><a href="#"><span class="rss"> </span></a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
+</div>
+<div style="height: 100%">
+    <img src="/FrontEnd/images/emploi.jpg" style="width: 100%;" >
+
 </div>
 <!-- //banner -->
 <!-- page details -->
@@ -13,71 +86,72 @@
 <!-- //page details -->
 
 <!-- menu -->
-<a href="http://www.adresse-de-votre-choix.com/" class="bouton5">Offrire un emploi</a>
+<a href="http://www.adresse-de-votre-choix.com/" style="margin-left: 1350px" class="bouton5">Offrire un emploi</a>
 
-<section class="portfolio py-5">
-    <div class="container py-xl-5 py-lg-3">
-        <div class="title-section text-center mb-md-5 mb-4 editContent">
-            <h3 class="editContent  w3ls-title mb-3">Nos <span class="editContent" style="outline: none; cursor: inherit;">Offre D'emploi</span></h3>
-            <p class="editContent  titile-para-text mx-auto">1)De nombreux réfugiés ont un haut niveau d’études et sont très qualifiés, mais ont souvent des difficultés à trouver un emploi en raison des politiques gouvernementales,
-                car ils sont victimes de discriminations, etc.
-                Les employeurs doivent fournir un emploi équitable et convenable aux réfugiés qu’ils emploient, notamment en les payant au moins le salaire minimum et en leur fournissant des conditions
-                de travail sûres, et en s’assurant que leurs méthodes de recrutement ne soient pas discriminatoires. <br>
-                2) Élaborez un plan pour déterminer comment votre entreprise peut encourager les réfugiés à travailler pour vous et comment leur fournir le soutien dont ils ont besoin pour s’épanouir.
-                Embaucher des réfugiés peut permettre à votre entreprise de bénéficier des compétences et de l’expérience des nouveaux arrivants.</p>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="gallery-demo">
-                    <a href="#gal1">
-                        <img src="images/emlpoi6.png" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
-                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">jardin d'enfant<span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 mt-md-0 mt-4">
-                <div class="gallery-demo">
-                    <a href="#gal2">
-                        <img src="images/receptionniste.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
-                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Receptionniste <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 mt-md-0 mt-4">
-                <div class="gallery-demo">
-                    <a href="#gal3">
-                        <img src="images/offre1.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
-                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Securité<span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
-                    </a>
-                </div>
+<section  class="portfolio py-5" style="margin-left: 100px;" >
+
+    <div class="title-section text-center mb-md-5 mb-4 editContent">
+        <h3 class="editContent  w3ls-title mb-3"> <span class="editContent" style="font-size: 50px;">Offre D'emploie</span></h3>
+        <p class="editContent  titile-para-text mx-auto" style="font-size: 20px;margin-bottom: 60px;" > 1.  De nombreux réfugiés ont un haut niveau d’études et sont très qualifiés, mais ont souvent des difficultés à trouver un emploi en raison des politiques gouvernementales,
+            car ils sont victimes de discriminations, etc.
+            Les employeurs doivent fournir un emploi équitable et convenable aux réfugiés qu’ils emploient, notamment en les payant au moins le salaire minimum et en leur fournissant des conditions
+            de travail sûres, et en s’assurant que leurs méthodes de recrutement ne soient pas discriminatoires. <br><br>
+            2.  Élaborez un plan pour déterminer comment votre entreprise peut encourager les réfugiés à travailler pour vous et comment leur fournir le soutien dont ils ont besoin pour s’épanouir.
+            Embaucher des réfugiés peut permettre à votre entreprise de bénéficier des compétences et de l’expérience des nouveaux arrivants.</p>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="gallery-demo">
+                <a href="#gal1">
+                    <img src="/FrontEnd/images/emlpoi6.png" alt=" " class="img-fluid" style="width: 70%;height: 70%">
+                    <h4 class="editContent p-mask" style="color: black">Jardin d'enfant - <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                </a>
             </div>
         </div>
-        <div class="row mt-md-5">
-            <div class="col-md-4 mt-md-0 mt-4">
-                <div class="gallery-demo">
-                    <a href="#gal4">
-                        <img src="images/offre2.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
-                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Transporteur <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
-                    </a>
-                </div>
+        <div class="col-md-4 mt-md-0 mt-4">
+            <div class="gallery-demo">
+                <a href="#gal2">
+                    <img src="/FrontEnd/images/receptionniste.jpg" alt=" " class="img-fluid" style="width: 70%;height: 70%">
+                    <h4 class="editContent p-mask" style="color: black">Receptionniste- <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                </a>
             </div>
-            <div class="col-md-4 mt-md-0 mt-4">
-                <div class="gallery-demo">
-                    <a href="#gal5">
-                        <img src="images/offre3.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
-                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Jardinier<span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 mt-md-0 mt-4">
-                <div class="gallery-demo">
-                    <a href="#gal6">
-                        <img src="images/offre5.jpg" alt=" " class="img-fluid" style="outline: none; cursor: inherit;">
-                        <h4 class="editContent p-mask" style="outline: none; cursor: inherit;">Instituteur dans une école privé<span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
-                    </a>
-                </div>
+        </div>
+        <div class="col-md-4 mt-md-0 mt-4">
+            <div class="gallery-demo">
+                <a href="#gal3">
+                    <img src="/FrontEnd/images/offre1.jpg" alt=" " class="img-fluid" style="width: 70%;height: 70%">
+                    <h4 class="editContent p-mask" style="color: black">Securité <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                </a>
             </div>
         </div>
     </div>
+    <div class="row mt-md-5">
+        <div class="col-md-4 mt-md-0 mt-4">
+            <div class="gallery-demo">
+                <a href="#gal4">
+                    <img src="/FrontEnd/images/offre2.jpg" alt=" " class="img-fluid" style="width: 70%;height: 70%">
+                    <h4 class="editContent p-mask" style="color: black">Transpoteur <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 mt-md-0 mt-4">
+            <div class="gallery-demo">
+                <a href="#gal5">
+                    <img src="/FrontEnd/images/offre3.jpg" alt=" " class="img-fluid" style="width: 70%;height: 70%">
+                    <h4 class="editContent p-mask" style="color: black">Jardinier <span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 mt-md-0 mt-4">
+            <div class="gallery-demo">
+                <a href="#gal6">
+                    <img src="/FrontEnd/images/offre5.jpg" alt=" " class="img-fluid" style="width: 70%;height: 70%">
+                    <h4 class="editContent p-mask" style="color: black">Instituteur dans une école privé<span class="editContent" style="outline: none; cursor: inherit;"></span></h4>
+                </a>
+            </div>
+        </div>
+    </div>
+
 </section>
 {% endblock %}
+
