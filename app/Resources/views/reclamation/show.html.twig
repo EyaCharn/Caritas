@@ -1,0 +1,48 @@
+{% extends 'Front/Front.html.twig' %}
+
+{% block body %}
+    <h1>Reclamation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reclamation.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ reclamation.description }}</td>
+            </tr>
+            <tr>
+                <th>Claimdate</th>
+                <td>{% if reclamation.claimdate %}{{ reclamation.claimdate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Userclaimed</th>
+                <td>{{ reclamation.userclaimed }}</td>
+            </tr>
+            <tr>
+                <th>Userclaimer</th>
+                <td>{{ reclamation.userclaimer }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ reclamation.etatrec }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reclamation_index') }}"> </a>
+        </li>
+        <li>
+            <a href="{{ path('reclamation_edit', { 'id': reclamation.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
