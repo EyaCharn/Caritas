@@ -1,0 +1,30 @@
+{% extends 'Front/Front.html.twig' %}
+
+{% block content %}
+    <center>
+        <h1>Réclamation</h1>
+        <br><br><br>
+    </center>
+    {{ form_start(form) }}
+
+    <div class="form-group">
+        <label for="email">Description</label>
+        <td> {{ form_widget(form.description , {'attr': {'class': 'form-control'}}) }}</td>
+    </div>
+    <div class="form-group">
+        <label for="pwd">Reclamation:</label>
+        <td> {{ form_widget(form.userclaimer,{'attr': {'class': 'form-control'}}) }}</td>
+    </div>
+    <center>
+
+        <input type="submit" value="Reclamer" class=" btn btn-primary">
+    </center>
+
+
+    {{ form_end(form) }}
+
+
+    <br><br>
+
+
+{% endblock %}
