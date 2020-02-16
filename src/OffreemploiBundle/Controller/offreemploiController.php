@@ -101,7 +101,7 @@ class offreemploiController extends Controller
     /**
      * Deletes a offreemploi entity.
      *
-     * @Route("/{id}", name="offreemploi_delete")
+     * @Route("delete/{id}", name="offreemploi_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, offreemploi $offreemploi)
