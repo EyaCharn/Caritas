@@ -1,31 +1,97 @@
 {% extends 'Front/Front.html.twig' %}
 {% block content %}
+
+    <style>/* Dropdown Button */
+
+        .contact-text {
+            margin-left:50px;
+        }
+        .email {
+            cursor: none;
+        }
+        .second-image {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .first-paragraph {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .mayssa {
+            text-align:center;
+        }
+        .title {
+            display:none;
+            margin-top: 50px;
+            font-style: times;
+        }
+        .dropbtn {
+            background-color: white;
+            color: darkseagreen;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {display: block;}
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {background-color: #3e8e41;} </style>
 <div class="grid-12 region region-content " id="region-content">
     <div class="region-inner region-content-inner">
         <a id="main-content"></a>
         <h1 class="title" id="page-title">HÉBERGEMENT SOLIDAIRE AVEC CARITAS </h1>
     </div>
 </div>
-<div class="field-body">
-    <p> Vous les avez forcément aperçu-e-s. </p>
-    <P> Il y a chaque soir des centaines d’<strong>exilé.e.s extrêmement vulnérables</strong> qui passent la nuit dehors. Ce sont pour <strong>  femmes seules avec ou sans enfants, les familles, les mineur.e.s non accompagné.e .s </strong> que nous agissons mais aussi afin d’accompagner les citoyens solidaires dans leur démarche d’accueil.</P>
-    <p> <strong> Vous souhaitez ouvrir votre porte ? Un soir, plusieurs soirs ou à plus long terme ? </strong></p>
-    <p class="rtecenter">
-        <a href="">
-            <img src="images/citoyen2.jpg">
-        </a>
-    </p>
-    <h2 class="rtecenter"> Contact</h2>
-    <p> <strong> Formulaire d’inscription:<a href=""> ici, en cliquant sur ce lien </a>
-            <br>
-            Email : </strong>
-    </p>
-    <p class="rtecenter">
-        &nbsp;
-    </p>
-    <p class="rtecenter">
-        <img alt src="images/heberg.jpg"
-    </p>
-</div>
+    <div class="field-body">
+        <div class="first-paragraph"><p> Vous les avez forcément aperçu-e-s. </p>
+            <P> Il y a chaque soir des centaines d’<strong>exilé.e.s extrêmement vulnérables</strong> qui passent la nuit dehors.<br> Ce sont pour <strong>  femmes seules avec ou sans enfants, les familles, les mineur.e.s non accompagné.e .s </strong><br> que nous agissons mais aussi afin d’accompagner les citoyens solidaires dans leur démarche d’accueil.</P>
+            <p> <strong> Vous souhaitez ouvrir votre porte ? Un soir, plusieurs soirs ou à plus long terme ? </strong></p></div>
+        <p class="rtecenter">
+            <a href="">
+                <div class="mayssa"><img src="images/citoyen2.jpg"></div>
+            </a>
+        </p>
+        <div class="contact-text"><h2 class="rtecenter"> Contact</h2>
+            <p> <strong> Formulaire d’inscription:<a href=""> ici, en cliquant sur ce lien </a>
+                    <br>
+
+                    Email : <a href=#><span class="email">caritascitoyen@gmail.com</span></a></strong>
+            </p></div>
+        <p class="rtecenter">
+            &nbsp;
+        </p>
+        <p class="rtecenter">
+        <div class="second-image"><img alt src="images/heberg.jpg"</div>
+        </p>
+    </div>
 {% endblock %}
 

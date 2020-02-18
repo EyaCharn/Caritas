@@ -21,10 +21,12 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new EvenementBundle\EvenementBundle(),
             new ActualiteBundle\ActualiteBundle(),
-            new ReclamationBundle\ReclamationBundle(),
-            new FormationBundle\FormationBundle(),
             new ServiceBundle\ServiceBundle(),
+            new ReclamationBundle\ReclamationBundle()
+            new FormationBundle\FormationBundle(),
             new OffreemploiBundle\OffreemploiBundle(),
+            new ReclamationBundle\ReclamationBundle(),
+            new PubliciteBundle\PubliciteBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

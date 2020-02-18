@@ -13,7 +13,7 @@
 
 
 
-<body>
+<div>
 
 {% block body %}
     {% block header %}
@@ -49,12 +49,37 @@
         </div>
     {% endblock %}
     {% block content %}
-    <h1>Servicesante creation</h1>
-
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
+    <h1>Service sante creation</h1>
+        <div class="container" style="width: 35%;">
+            {{ form_start(form) }}
+            <div class="form-group">
+                {{ form_label(form.specialite, 'Specialite: ') }}
+                {{ form_widget(form.specialite, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.periodeDispo, 'PeriodeDispo: ') }}
+                {{ form_widget(form.periodeDispo, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.lettreMotiv, 'Lettre motivation: ') }}
+                {{ form_widget(form.lettreMotiv, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.cv, 'CV: ') }}
+                {{ form_widget(form.cv, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.commentaire, 'Commentaire: ') }}
+                {{ form_widget(form.commentaire, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <input type="submit" class="btn" value="Create" />
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div>
         <input type="submit" value="Create" />
-    {{ form_end(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+</div>
 
     <ul>
         <li>

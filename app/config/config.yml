@@ -5,11 +5,9 @@ imports:
     - { resource: "@SolidarityBundle/Resources/config/services.yml" }
     - { resource: "@EvenementBundle/Resources/config/services.yml" }
     - { resource: "@ActualiteBundle/Resources/config/services.yml" }
-    - { resource: "@FormationBundle/Resources/config/services.yml" }
-    - { resource: "@ServiceBundle/Resources/config/services.yml" }
-    - { resource: "@OffreemploiBundle/Resources/config/services.yml" }
+    - { resource: "@ServiceBundle/Resources/config/services.yml"}
     - { resource: "@ReclamationBundle/Resources/config/services.yml" }
-
+    - { resource: "@PubliciteBundle/Resources/config/services.yml" }
 
 
 

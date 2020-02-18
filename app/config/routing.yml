@@ -1,3 +1,11 @@
+publicite_publicite:
+    resource: "@PubliciteBundle/Controller/PubliciteController.php"
+    type:     annotation
+
+publicite:
+    resource: "@PubliciteBundle/Resources/config/routing.yml"
+    prefix:   /publicite
+
 evenement_participation:
     resource: "@EvenementBundle/Controller/participationController.php"
     type:     annotation
@@ -5,6 +13,13 @@ evenement_participation:
 evenement_evenement:
     resource: "@EvenementBundle/Controller/evenementController.php"
     type:     annotation
+
+evenement:
+    resource: "@EvenementBundle/Resources/config/routing.yml"
+    prefix:   /evenement
+
+
+
 actualite_actualite:
     resource: "@ActualiteBundle/Controller/ActualiteController.php"
     type:     annotation
@@ -12,50 +27,48 @@ actualite_actualite:
 actualite:
     resource: "@ActualiteBundle/Resources/config/routing.yml"
     prefix:   /
-
-solidarity:
-    resource: "@SolidarityBundle/Resources/config/routing.yml"
-    prefix:   /solidarity
-
-formation:
-    resource: "@FormationBundle/Resources/config/routing.yml"
-    prefix:   /formation
-
-formation_formation:
-    resource: "@FormationBundle/Controller/formationController.php"
+service_hebergement:
+    resource: "@ServiceBundle/Controller/hebergementController.php"
     type:     annotation
+    prefix:   /actualite
 
 service:
     resource: "@ServiceBundle/Resources/config/routing.yml"
     prefix:   /hebergement
-
-service_hebergement:
-    resource: "@ServiceBundle/Controller/hebergementController.php"
+service_servicesante:
+    resource: "@ServiceBundle/Controller/servicesanteController.php"
     type:     annotation
 
-offreemploi:
-    resource: "@OffreemploiBundle/Resources/config/routing.yml"
-    prefix:   /offreemploi
+servicesante:
+    resource: "@ServiceBundle/Resources/config/routing.yml"
+    prefix:   /servicesante
 
-offreemploi_offreemploi:
-    resource: "@OffreemploiBundle/Controller/offreemploiController.php"
+reclamation:
+    resource: "@ReclamationBundle/Resources/config/routing.yml"
+    prefix:   /reclamation
+
+reclamation_reclamation:
+    resource: "@ReclamationBundle/Controller/reclamationController.php"
     type:     annotation
 
+solidarity:
+    resource: "@SolidarityBundle/Resources/config/routing.yml"
+    prefix:   /solidarity
 
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-reclamation_reclamation:
-    resource: "@ReclamationBundle/Controller/ReclamationController.php"
-    type:     annotation
-reclamation:
-        resource: "@ReclamationBundle/Resources/config/routing.yml"
-        prefix:   /reclamation
 reclamation_traitement:
         resource: "@ReclamationBundle/Controller/TraitementController.php"
         type:     annotation
 traitement:
         resource: "@ReclamationBundle/Resources/config/routing.yml"
         prefix:   /traitement
+
+fos_user_registration_confirmed:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /

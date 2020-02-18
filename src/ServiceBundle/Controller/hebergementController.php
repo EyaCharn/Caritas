@@ -60,7 +60,7 @@ class hebergementController extends Controller
     /**
      * Finds and displays a hebergement entity.
      *
-     * @Route("/{id}", name="hebergement_show")
+     * @Route("/{id}/show", name="hebergement_show")
      * @Method("GET")
      */
     public function showAction(hebergement $hebergement)
@@ -101,7 +101,7 @@ class hebergementController extends Controller
     /**
      * Deletes a hebergement entity.
      *
-     * @Route("/{id}", name="hebergement_delete")
+     * @Route("{id}/delete", name="hebergement_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, hebergement $hebergement)
