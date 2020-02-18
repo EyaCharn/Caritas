@@ -133,4 +133,21 @@ class hebergementController extends Controller
             ->getForm()
         ;
     }
+    public function executeIndex($request)
+    {
+        $this->form = new HebergementForm();
+
+        if ($request->isMethod('post'))
+        {
+            $this->form->bind($request->getParameter('hebergement'));
+            if ($this->form->isValid())
+            {
+                $this->redirect('hebergement/thankyou?'.http_build_query($this->form->getValues()));
+            }
+        }
+    }
+
+    public function executeThankyou()
+    {
+    }
 }
