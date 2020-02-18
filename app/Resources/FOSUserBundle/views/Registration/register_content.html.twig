@@ -1,0 +1,88 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<form action="{{ path('fos_user_registration_register') }}" method="post" xmlns="http://www.w3.org/1999/html">
+    <div>
+        <input type="submit" value="{{ 'registration.submit'|trans }}"/>
+    </div>
+    <div class="head" id="home">
+        <div class="container">
+            <div class="head-top">
+                <div class="col-md-6 h-left">
+                    <p>+126 50 326 969 , +126 53 505 699 </p>
+                </div>
+                <div class="col-md-6 h-right">
+                    <ul>
+                        <li><a href="#"><span class="fb"> </span></a></li>
+                        <li><a href="#"><span class="twit"> </span></a></li>
+                        <li><a href="#"><span class="pin"> </span></a></li>
+                        <li><a href="#"><span class="rss"> </span></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <div class="contact-top heading">
+                <h1>INSCRIPTION</h1>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d47753.14235372253!2d-87.8390792!3d41.57851990000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1skohl&#39;s!5e0!3m2!1sen!2sin!4v1436335323316"
+                        style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="contact-form heading">
+                <h3>Formulaire d'inscription</h3>
+                <p>Pour s'inscrire, merci de remplir ce formulaire et se profiter de nos différentes services.</p>
+                <div class="contact-bottom">
+                    {{ form_widget(form.email, {'attr':{'placeholder':'Email'}}) }}
+                    </br>
+                    </br>
+                    {{ form_widget(form.plainPassword.first, {'attr':{'placeholder':' Password'}}) }}
+                    {{ form_widget(form.plainPassword.second, {'attr':{'placeholder':'Confirm Password'}}) }}
+                    </br>
+                    </br>
+                    {{ form_widget(form.first_name, {'attr':{'placeholder':'first name'}}) }}
+                    {{ form_widget(form.last_name, {'attr':{'placeholder':'last_name'}}) }}
+                    <br>
+                    <br>
+                    {{ form_widget(form.username, {'attr':{'placeholder':'username'}}) }}
+
+                    {{ form_widget(form.roles) }}
+
+
+
+
+                    {{ form_rest(form) }}
+                        <div class="submit-btn">
+                            <input type="submit" value="S'inscrire">
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--contact-end-->
+    <!--address-starts-->
+    <div class="address">
+        <div class="container">
+            <div class="address-top">
+                <div class="col-md-4 add-left">
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                    <p><label>Caritas</label>
+                        24 Rue Ahmed Chwaki - La Sokra</p>
+                </div>
+                <div class="col-md-4 add-left">
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    <p>+126 50 326 969 ,
+                        <br>+126 53 699 505</p>
+                </div>
+                <div class="col-md-4 add-left">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <p><a href="mailto:example@email.com">caritas@gmail.com</a></p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</form>
