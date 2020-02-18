@@ -6,9 +6,6 @@ evenement_evenement:
     resource: "@EvenementBundle/Controller/evenementController.php"
     type:     annotation
 
-
-
-
 actualite_actualite:
     resource: "@ActualiteBundle/Controller/ActualiteController.php"
     type:     annotation
@@ -16,6 +13,41 @@ actualite_actualite:
 actualite:
     resource: "@ActualiteBundle/Resources/config/routing.yml"
     prefix:   /
+service_hebergement:
+    resource: "@ServiceBundle/Controller/hebergementController.php"
+    type:     annotation
+
+service:
+    resource: "@ServiceBundle/Resources/config/routing.yml"
+    prefix:   /hebergement
+service_servicesante:
+    resource: "@ServiceBundle/Controller/servicesanteController.php"
+    type:     annotation
+
+servicesante:
+    resource: "@ServiceBundle/Resources/config/routing.yml"
+    prefix:   /servicesante
+formation_formation:
+    resource: "@FormationBundle/Controller/formationController.php"
+    type:     annotation
+
+formation:
+    resource: "@FormationBundle/Resources/config/routing.yml"
+    prefix:   /formation
+offreemploi_offreemploi:
+    resource: "@OffreemploiBundle/Controller/offreemploiController.php"
+    type:     annotation
+
+reclamation:
+    resource: "@ReclamationBundle/Resources/config/routing.yml"
+    prefix:   /reclamation
+reclamation_reclamation:
+    resource: "@ReclamationBundle/Controller/reclamationController.php"
+    type:     annotation
+
+offreemploi:
+    resource: "@OffreemploiBundle/Resources/config/routing.yml"
+    prefix:   /offreemploi
 
 solidarity:
     resource: "@SolidarityBundle/Resources/config/routing.yml"
