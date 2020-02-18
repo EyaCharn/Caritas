@@ -24,7 +24,7 @@ class AppKernel extends Kernel
             new ServiceBundle\ServiceBundle(),
             new FormationBundle\FormationBundle(),
             new OffreemploiBundle\OffreemploiBundle(),
-            new ReclamationBundle\ReclamationBundle()
+            new ReclamationBundle\ReclamationBundle(),
             new PubliciteBundle\PubliciteBundle(),
         ];
 
