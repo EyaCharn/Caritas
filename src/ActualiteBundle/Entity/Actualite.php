@@ -36,6 +36,13 @@ class Actualite
     private $contenu;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=123456789)
+     */
+    private $image;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="dateajout", type="date")
@@ -155,4 +162,22 @@ class Actualite
     {
         return $this->datemodif;
     }
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+
 }

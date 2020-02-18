@@ -44,7 +44,14 @@ class ActualiteController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $image = $form->get('image')->getData();
+            $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+            // this is needed to safely include the file name as part of the URL
+           // $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+            $newFilename = $originalFilename.'.'.$image->guessExtension();
+
             $em = $this->getDoctrine()->getManager();
+            $actualite->setImage('FrontEnd/images/'.$newFilename);
             $em->persist($actualite);
             $em->flush();
 

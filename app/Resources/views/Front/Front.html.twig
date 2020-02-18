@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}
 
+        <link href="{{ asset('FrontEnd/css/bootstrap.css') }}" rel='stylesheet'/>
+        <link href="{{ asset('FrontEnd/css/style.css') }}" rel='stylesheet'/>
+        <link rel="stylesheet" href="{{ asset('FrontEnd/css/flexslider.css') }}"/>
         <link href="{{ asset('FrontEnd/css/bootstrap.css') }}" rel='stylesheet' />
         <link href="{{ asset('FrontEnd/css/style.css') }}" rel='stylesheet'  />
         <link rel="stylesheet" href="{{ asset('FrontEnd/css/flexslider.css') }}"  />
@@ -13,11 +16,12 @@
 </head>
 
 
-
 <body>
 {% block body %}
 
-{% block header %}
+    {% block header %}
+
+
     <div class="header">
         <div class="container">
             <div class="header-main">
@@ -46,6 +50,7 @@
                             });
                         </script>
                     </div>
+                    <div class="clearfix"></div>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -58,22 +63,24 @@
 
     {% block content %}
 
+        {% block login %}
+        {% endblock login %}
     {% endblock %}
 
 
-{% block footer %}
-    <div class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <a href="index.html"><h3>CARITAS</h3></a>
-                <p>© 2020 CARITAS. All Rights Reserved </a> </p>
-                <a href="#home" class="scroll"><img src="{{ asset('FrontEnd/images/top-arrow.png') }}" alt="" /></a>
-            </div>
-        </div>
+    {% block footer %}
+        <div class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <a href="index.html"><h3>CARITAS</h3></a>
+                    <p>© 2020 CARITAS. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a>
+                    </p>
+                    <a href="#home" class="scroll"><img src="{{ asset('FrontEnd/images/top-arrow.png') }}" alt=""/></a>
+                </div>
+
     </div>
 {% endblock %}
 {% endblock %}
-
 {% block javascripts %}
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <script type="text/javascript">
@@ -90,11 +97,13 @@
     <script type="text/javascript" src="{{ asset('FrontEnd/js/easing.js') }}"></script>
     <script defer src="{{ asset('FrontEnd/js/jquery.flexslider.js') }}"></script>
     <script>
-        $("span.menu").click(function(){
-            $(".top-nav ul").slideToggle(500, function(){
-            });
+        $("span.menu").click(function () {
+            $(".top-nav ul").slideToggle(500, function () {
+        });
         });
     </script>
+
+
     <script defer src="{{ 'FrontEnd/js/jquery.flexslider.js' }}"></script>
     <script type="text/javascript">
         $(window).load(function(){
@@ -108,6 +117,7 @@
     </script>
 
 {% endblock %}
+
 
 </body>
 </html>
