@@ -22,8 +22,6 @@ class AppKernel extends Kernel
             new EvenementBundle\EvenementBundle(),
             new ActualiteBundle\ActualiteBundle(),
             new ServiceBundle\ServiceBundle(),
-            new FormationBundle\FormationBundle(),
-            new OffreemploiBundle\OffreemploiBundle(),
             new ReclamationBundle\ReclamationBundle()
         ];
 

@@ -27,27 +27,14 @@ service_servicesante:
 servicesante:
     resource: "@ServiceBundle/Resources/config/routing.yml"
     prefix:   /servicesante
-formation_formation:
-    resource: "@FormationBundle/Controller/formationController.php"
-    type:     annotation
-
-formation:
-    resource: "@FormationBundle/Resources/config/routing.yml"
-    prefix:   /formation
-offreemploi_offreemploi:
-    resource: "@OffreemploiBundle/Controller/offreemploiController.php"
-    type:     annotation
 
 reclamation:
     resource: "@ReclamationBundle/Resources/config/routing.yml"
     prefix:   /reclamation
+
 reclamation_reclamation:
     resource: "@ReclamationBundle/Controller/reclamationController.php"
     type:     annotation
-
-offreemploi:
-    resource: "@OffreemploiBundle/Resources/config/routing.yml"
-    prefix:   /offreemploi
 
 solidarity:
     resource: "@SolidarityBundle/Resources/config/routing.yml"
