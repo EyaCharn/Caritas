@@ -60,7 +60,7 @@ class formationController extends Controller
     /**
      * Finds and displays a formation entity.
      *
-     * @Route("/{id}", name="formation_show")
+     * @Route("/{id}/show", name="formation_show")
      * @Method("GET")
      */
     public function showAction(formation $formation)
@@ -101,7 +101,7 @@ class formationController extends Controller
     /**
      * Deletes a formation entity.
      *
-     * @Route("/{id}", name="formation_delete")
+     * @Route("{id}/delete", name="formation_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, formation $formation)
