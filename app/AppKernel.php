@@ -21,6 +21,10 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new EvenementBundle\EvenementBundle(),
             new ActualiteBundle\ActualiteBundle(),
+            new ServiceBundle\ServiceBundle(),
+            new FormationBundle\FormationBundle(),
+            new OffreemploiBundle\OffreemploiBundle(),
+            new ReclamationBundle\ReclamationBundle()
             new PubliciteBundle\PubliciteBundle(),
         ];
 

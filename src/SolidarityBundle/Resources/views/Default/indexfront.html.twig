@@ -2,4 +2,176 @@
 {% extends 'Front/Front.html.twig' %}
 {% block content %}
 
+  
+    <div class="banner">
+        <div class="container">
+            <div class="banner-top">
+                <section class="slider">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="banner-text">
+                                    <h3>La solidarité</h3>
+                                    <p>est la tendresse des peuples.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-text">
+                                    <h3>Protegeons</h3>
+                                    <p>Aidons</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-text">
+                                    <h3>construisons des ponts</h3>
+                                    <p>entre les individus</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!--banner-end-->
+    <!--FlexSlider-->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <!--End-slider-script-->
+    <!--welcome-starts-->
+    <!--welcome-starts-->
+    <div class="welcome">
+        <div class="container">
+            <div class="welcome-top">
+
+                    <h2 style="font-size: 50px;margin-top: -5%;">Bienvenu</h2>
+                    <p style="font-size: 25px;">Fournir un soutien bénévole est vital aux réfugiés qui cherchent refuge dans des conditions dû aux  conditions difficiles dans leur pays d'origine.
+                        La peur de la persécution, de la guerre et de la violence est une préoccupation réelle, les obligeant à fuir et à demander de l'aide dans les pays voisins.
+
+                    </p>
+
+
+
+
+
+
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    </div>
+    </div>
+    <!--welcome-end-->
+
+
+    <!--events-starts-->
+    <div class="events">
+        <div class="container">
+            <div class="events-top heading" style="margin-bottom: 30px;">
+                <h3>Les Associations les plus marquantes 2019 </h3>
+            </div>
+
+            <div class="col-md-3 event-right">
+                <div class="e-1">
+                    <img src="/FrontEnd/images/terredasile.jpg" alt="" />
+                    <h4>Terre d’asile Tunisie</h4>
+                    <br>
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    +126 53 699 505
+                    <br>
+                    <br> <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+
+                    Maison du Droit et des Migrations 17 rue Khaled Ibn El Oualid Mutuelleville - Tunis</p>
+
+                </div>
+            </div>
+            <div class="col-md-3 event-right" style="margin-left: 100px;">
+                <div class="e-1">
+                    <img src="/FrontEnd/images/ftdes.png" alt="" />
+                    <h4>FTDES</h4>
+                    <br>
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    +126 71 257 664
+                    <br>
+                    <br> <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                    47, Avenue Farhat Hached، Bloc "A", 2ème étage، Tunis 1001, Tunisie
+                </div>
+            </div>
+            <div class="col-md-3 event-right" style="margin-left: 100px;">
+                <div class="e-1">
+                    <img src="/FrontEnd/images/trc.jpg" alt="" />
+                    <h4>Conseil Tunisien pour les Réfugiés</h4>
+                    <br>
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    +126 71 781 531
+                    <br>
+                    <br> <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                    Rue Abdelhamid Ibn Bedis - 1002 - Tunis
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    </div>
+    <!--events-end-->
+    <!--help-starts-->
+    <div class="help">
+        <div class="help-left">
+            <img src="/FrontEnd/images/h2.jpg" alt="" />
+        </div>
+        <div class="help-right heading">
+            <h3>On à besoin de vous</h3>
+            <h5>Nous travaillons nuit et jour pour protéger les réfugiés et leur venir en aide . Mais nous avons besoin de votre aide pour continuer.</h5>
+
+            <div class="tool">
+                <a class="tooltips" href="#">
+                    <span></span></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!--help-end-->
+    <!--address-starts-->
+    <!--help-end-->
+    <!--letter-starts-->
+
+
+    <!--letter-end-->
+
+    <!--address-starts-->
+    <div class="address">
+        <div class="container">
+            <div class="address-top">
+                <div class="col-md-4 add-left">
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                    <p><label>Company name.</label>
+                        795 Folsom Ave, Suite 600
+                        San Francisco, CA 94107</p>
+                </div>
+                <div class="col-md-4 add-left">
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    <p>+122 235 5689 ,
+                        <br>+132 326 3695</p>
+                </div>
+                <div class="col-md-4 add-left">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <p><a href="mailto:example@email.com">contact@example.com</a></p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

@@ -1,0 +1,177 @@
+{% extends 'Front/Front.html.twig' %}
+{% block content %}
+<style>
+    .first-flex {
+        margin-right:20px;
+    }
+    .big-flex {
+        display: flex;
+        margin-left: 250px;
+    }
+    .my-body {
+        margin:120px;
+    }
+    .first_title {
+        font-family: Times;
+        font-weight: bold;
+    }
+    .image {
+        position:relative;
+        left:550px;
+    }
+
+    .header-text {
+        position: relative;
+        left:380px;
+        top: 5px;
+    }
+    .dropbtn {
+        background-color: white;
+        color: darkseagreen;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: #3e8e41;} </style
+<div class="head" id="home">
+    <div class="container">
+        <div class="head-top">
+            <div class="col-md-6 h-left">
+                <p>+123 456 7897 , +132 567 8977</p>
+            </div>
+            <div class="col-md-6 h-right">
+                <ul>
+                    <li><a href="#"><span class="fb"> </span></a></li>
+                    <li><a href="#"><span class="twit"> </span></a></li>
+                    <li><a href="#"><span class="pin"> </span></a></li>
+                    <li><a href="#"><span class="rss"> </span></a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--head-->
+<!--header-->
+<div class="field-body">
+
+    <div class="image"><img alt height="100" src="/FrontEnd/images/donne.png" width="200"></div>
+
+    <div class="header-text"><p>
+            <strong>
+                Vous souhaitez faire un don de vêtements, produits d’hygiène, matériel de couchage&nbsp;?
+            </strong>
+        </p>
+        <p>
+            <strong>
+                Vous souhaitez organiser une collecte et voulez connaître nos besoins&nbsp;?
+            </strong>
+        </p>
+        <p> Prenez contact directement avec nous pour connaître nos besoins en matériel.</p>
+    </div>
+    <div class="my-body">
+        <h2 class="first_title"> NOS BESOINS PRINCIPAUX</h2>
+        <p> Nous collectons principalement les dons suivants. Votre don est précieux, mais si nous collectons des dons qui ne correspondent pas à nos actions, nous ne pourrons pas les distribuer.</p>
+
+
+        <div class="big-flex">
+            <div class="first-flex">
+
+
+                <h2>VÊTEMENTS…</h2>
+                <p>
+                    <strong>
+                        Hommes, en tailles S, M, L et XL&nbsp;:
+                    </strong>
+                </p>
+                <ul>
+                    <li> manteau (imperméables et/ou non imperméables)</li>
+                    <li> chaussures de sport/basket en taille 40 à 45</li>
+                    <li>  t-shirts à manches longues et sous-pulls</li>
+                    <li>  sweats et pulls en taille </li>
+                    <li>  t-shirt à manches courtes</li>
+                    <li>  jeans,pantalons de survêtement</li>
+                    <li>  chaussettes,gants, bonnets, écharpes</li>
+                </ul>
+                <p>&nbsp;</p>
+                <p> <strong> Adolescents garçons</strong></p>
+                <ul>
+                    <li>pantalons de survêtement 12-17 ans </li>
+                    <li>jeans 12-17 ans </li>
+                    <li>sous-vêtements 12-17 ans ou en taille XS/S homme </li>
+                    <li>basket en taille 37 à 43</li>
+                </ul>
+                <p>&nbsp;</p>
+                <p> <strong> Bébé </strong></p>
+                <ul>
+                    <li>couches pour bébé (taille 1 à 6) </li>
+                    <li>talc et crèmes pour bébés</li>
+                    <li>lait 2e/3e âge </li>
+                    <li>petits pots bébé nourriture</li>
+                </ul>
+
+
+            </div>
+
+            <div class="second-flex">
+                <h2>ELECTRONIQUE</h2>
+                <ul>
+                    <li>smartphones débloqués </li>
+                    <li>cartes sim</li>
+                    <li>Power Banks </li>
+                    <li>batteries rechargeables</li>
+                </ul>
+                <h2>MISE À L’ABRI</h2>
+                <ul>
+                    <li>tentes</li>
+                    <li>couvertures épaisses</li>
+                    <li>tapis de sol </li>
+                    <li>pancho de pluie</li>
+                </ul>
+                <h2>HYGIÈNE</h2>
+                <ul>
+                    <li>brosses à dents,dentifrice</li>
+                    <li>gel douche, shampoing et savons</li>
+                    <li>lingettes,mouchoirs et serviettes de toilette</li>
+                </ul>
+            </div>
+        </div>
+
+        <p>&nbsp;</p>
+        <p><strong>  Vous souhaitez donner quelque chose ? </strong> Rejoignez-nous via la rubrique <a href="contact.html.twig" > <strong>Contact</strong> </a> pour nous en faire part ! Nous sommes, selon les missions en cours, parfois à la recherche de meubles, de matériel de cuisine ou d’autres dons encore.  </p>
+
+
+    </div>
+{% endblock %}

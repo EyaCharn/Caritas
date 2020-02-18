@@ -1,0 +1,28 @@
+{% extends 'Back/Back.html.twig' %}
+
+{% block content %}
+    <h1>Traitement creation</h1>
+
+    {# {{ form_start(form) }}
+         {{ form_widget(form) }}
+         <input type="submit" value="Create" />
+     {{ form_end(form) }}#}
+
+    <form method="POST">
+        <fieldset>
+            <table>
+                <tr>
+                    <td> Reponse </td>
+                    <td> {{ form_widget(form.rating) }}</td>
+                </tr>
+
+
+            </table>
+            <input type="submit" value="Ajouter" />
+            <ul>
+                <li>
+                    <a href="{{ path('traitement_index') }}">Back to the list</a>
+                </li>
+            </ul>
+    </form>
+{% endblock %}

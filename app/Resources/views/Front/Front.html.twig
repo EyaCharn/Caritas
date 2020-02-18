@@ -8,7 +8,11 @@
         <link href="{{ asset('FrontEnd/css/bootstrap.css') }}" rel='stylesheet'/>
         <link href="{{ asset('FrontEnd/css/style.css') }}" rel='stylesheet'/>
         <link rel="stylesheet" href="{{ asset('FrontEnd/css/flexslider.css') }}"/>
+        <link href="{{ asset('FrontEnd/css/bootstrap.css') }}" rel='stylesheet' />
+        <link href="{{ asset('FrontEnd/css/style.css') }}" rel='stylesheet'  />
+        <link rel="stylesheet" href="{{ asset('FrontEnd/css/flexslider.css') }}"  />
     {% endblock %}
+
 </head>
 
 
@@ -61,16 +65,44 @@
                                 $("span.menu").click(function () {
                                     $(".top-nav ul").slideToggle(500, function () {
                                     });
+{% block header %}
+    <div class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <a href="index.html"><h1>CARITAS</h1></a>
+                </div>
+                <div class="head-right">
+                    <div class="top-nav">
+                        <span class="menu"><img src="{{ asset('FrontEnd/images/nav-icon.png') }}" alt=""> </span>
+                        <ul>
+                            <li><a href="index.html"  class="active"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                            <li><a href="about.html"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
+                            <li><a href="typo.html"><span class="glyphicon glyphicon-certificate"></span>Short Codes</a></li>
+                            <li><a href="gallery.html"><span class="glyphicon glyphicon-picture"></span>Gallery</a></li>
+                            <li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span>Contact</a></li>
+                         
+
+
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <!--script-->
+                        <script>
+                            $("span.menu").click(function(){
+                                $(".top-nav ul").slideToggle(500, function(){
                                 });
-                            </script>
-                        </div>
+                            });
+                        </script>
                     </div>
                     <div class="clearfix"></div>
                 </div>
+                <div class="clearfix"> </div>
             </div>
         </div>
+    </div>
 
-    {% endblock %}
+    <!--address-end-->
+{% endblock %}
 
 
     {% block content %}
@@ -89,9 +121,17 @@
                     </p>
                     <a href="#home" class="scroll"><img src="{{ asset('FrontEnd/images/top-arrow.png') }}" alt=""/></a>
                 </div>
+{% block footer %}
+    <div class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <a href="index.html"><h3>CARITAS</h3></a>
+                <p>© 2020 CARITAS. All Rights Reserved </a> </p>
+                <a href="#home" class="scroll"><img src="{{ asset('FrontEnd/images/top-arrow.png') }}" alt="" /></a>
             </div>
         </div>
     {% endblock %}
+    </div>
 {% endblock %}
 
 {% block javascripts %}
@@ -107,6 +147,13 @@
             $(".scroll").click(function (event) {
                 event.preventDefault();
                 $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+{% block javascripts %}
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
             });
         });
     </script>
@@ -118,6 +165,16 @@
     <script>
         $("span.menu").click(function () {
             $(".top-nav ul").slideToggle(500, function () {
+        });
+    </script>
+    <script src="{{ asset('FrontEnd/js/jquery.min.js') }}"></script>
+    <!--start-smoth-scrolling-->
+    <script type="text/javascript" src="{{ asset('FrontEnd/js/move-top.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('FrontEnd/js/easing.js') }}"></script>
+    <script defer src="{{ asset('FrontEnd/js/jquery.flexslider.js') }}"></script>
+    <script>
+        $("span.menu").click(function(){
+            $(".top-nav ul").slideToggle(500, function(){
             });
         });
     </script>
@@ -127,6 +184,16 @@
             $('.flexslider').flexslider({
                 animation: "slide",
                 start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+        });
+    </script>
+    <script defer src="{{ 'FrontEnd/js/jquery.flexslider.js' }}"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider){
                     $('body').removeClass('loading');
                 }
             });

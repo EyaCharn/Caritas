@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Traitement</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ traitement.id }}</td>
+            </tr>
+            <tr>
+                <th>Idreclamation</th>
+                <td>{{ traitement.idrec}}</td>
+            </tr>
+            <tr>
+                <th>Datetraitement</th>
+                <td>{% if traitement.datetraitement %}{{ traitement.datetraitement|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Rating</th>
+                <td>{{ traitement.rating }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+          {# <a href="{{ path('traitement_index') }}">Back to the list</a>#}
+        </li>
+        <li>
+            <a href="{{ path('traitement_edit', { 'id': traitement.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
