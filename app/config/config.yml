@@ -9,11 +9,6 @@ imports:
     - { resource: "@FormationBundle/Resources/config/services.yml" }
     - { resource: "@OffreemploiBundle/Resources/config/services.yml" }
     - { resource: "@ReclamationBundle/Resources/config/services.yml" }
-    - { resource: "@FormationBundle/Resources/config/services.yml" }
-    - { resource: "@ServiceBundle/Resources/config/services.yml" }
-    - { resource: "@OffreemploiBundle/Resources/config/services.yml" }
-    - { resource: "@ReclamationBundle/Resources/config/services.yml" }
-
 
 
 

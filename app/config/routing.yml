@@ -53,42 +53,11 @@ solidarity:
     resource: "@SolidarityBundle/Resources/config/routing.yml"
     prefix:   /solidarity
 
-formation:
-    resource: "@FormationBundle/Resources/config/routing.yml"
-    prefix:   /formation
-
-formation_formation:
-    resource: "@FormationBundle/Controller/formationController.php"
-    type:     annotation
-
-service:
-    resource: "@ServiceBundle/Resources/config/routing.yml"
-    prefix:   /hebergement
-
-service_hebergement:
-    resource: "@ServiceBundle/Controller/hebergementController.php"
-    type:     annotation
-
-offreemploi:
-    resource: "@OffreemploiBundle/Resources/config/routing.yml"
-    prefix:   /offreemploi
-
-offreemploi_offreemploi:
-    resource: "@OffreemploiBundle/Controller/offreemploiController.php"
-    type:     annotation
-
-
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-reclamation_reclamation:
-    resource: "@ReclamationBundle/Controller/ReclamationController.php"
-    type:     annotation
-reclamation:
-        resource: "@ReclamationBundle/Resources/config/routing.yml"
-        prefix:   /reclamation
 reclamation_traitement:
         resource: "@ReclamationBundle/Controller/TraitementController.php"
         type:     annotation
