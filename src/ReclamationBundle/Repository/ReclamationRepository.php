@@ -28,4 +28,13 @@ class ReclamationRepository extends \Doctrine\ORM\EntityRepository
             ->getOneOrNullResult();
         return $query=$last_entity->getSingleScalarResult();
     }
+    public function findbyuserclaimer()
+    {
+        $Query=$this->getEntityManager()->createQuery(
+            "Select a.userclaimer, COUNT(a.id) as st 
+            from ReclamationBundle:reclamation a
+            GROUP BY a.userclaimer"
+        );
+        return $Query->getArrayResult();
+    }
 }

@@ -27,6 +27,9 @@ class AppKernel extends Kernel
             new FormationBundle\FormationBundle(),
             new EmploiBundle\EmploiBundle(),
             new FormateurBundle\FormateurBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Nomaya\SocialBundle\NomayaSocialBundle(),
+            new AncaRebeca\FullCalendarBundle\FullCalendarBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

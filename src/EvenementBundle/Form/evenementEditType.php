@@ -11,7 +11,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use UserBundle\Entity\Theme;
 
-class evenementType extends AbstractType
+class evenementEditType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -25,12 +25,11 @@ class evenementType extends AbstractType
                 'choice_label' => 'nom',
                 'required'=>true,
                 'placeholder' => 'Choose a Theme',
-                 //'multiple' => true,
-                //'expanded' => true,
+                // 'multiple' => true,
+                // 'expanded' => true,
             ])
-            ->add('image',FileType::class,array('data_class'=>null ,
-            'label' => false))
-            ->add('description',TextareaType::class)->add('date',DateType::class, [
+            ->add('description',TextareaType::class)
+            ->add('date',DateType::class, [
             'widget' => 'single_text',
             // this is actually the default format for single_text
             'format' => 'yyyy-MM-dd',

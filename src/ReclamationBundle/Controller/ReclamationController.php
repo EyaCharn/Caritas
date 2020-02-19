@@ -25,17 +25,38 @@ class ReclamationController extends Controller
      * @Route("/", name="reclamation_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-
         $reclamations = $em->getRepository('ReclamationBundle:Reclamation')->findAll();
 
+        if ($request->isMethod('Post'))
+        {
+
+
+        $id=$request->get('idc');
+
+        $reclamations = $em->getRepository('ReclamationBundle:Reclamation')->findById($id);
+        }
         return $this->render('reclamation/index.html.twig', array(
             'reclamations' => $reclamations,
         ));
     }
+    /**
+     * Deletes a reclamation entity.
+     *
+     * @Route("/stat", name="reclamation_stat")
+     * @Method("GET")
+     */
+    public function statAction()
+    {
+        $em=$this->getDoctrine()->getManager();
+        $userclaimer=$em->getRepository('ReclamationBundle:Reclamation')->findbyuserclaimer();
+        return $this->render('reclamation/stat.html.twig', array(
+            'userclaimer' => $userclaimer
+        ));
 
+    }
     /**
      * Creates a new reclamation entity.
      *
@@ -147,4 +168,6 @@ class ReclamationController extends Controller
             ->getForm()
         ;
     }
+
+
 }

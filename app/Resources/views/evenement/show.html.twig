@@ -1,44 +1,85 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseFront.html.twig' %}
 
-{% block body %}
-    <h1>Evenement</h1>
+{% block stylesheets %}
+    <style>
+        .img-event {
+            display: block;
+            max-width:445px;
+            max-height:300px;
+            width: 445px;
+            height: 300px;"
+        }
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ evenement.id }}</td>
-            </tr>
-            <tr>
-                <th>Nomevenement</th>
-                <td>{{ evenement.nomEvenement }}</td>
-            </tr>
-            <tr>
-                <th>Theme</th>
-                <td>{{ evenement.theme }}</td>
-            </tr>
-            <tr>
-                <th>Nbdeparticipants</th>
-                <td>{{ evenement.nbDeParticipants }}</td>
-            </tr>
-            <tr>
-                <th>Date</th>
-                <td>{% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-        </tbody>
-    </table>
+        .letter-bottom a  {
+            color: #fff;
+            padding: 9px 30px;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1px double #003366;
+            margin: 0 0 0 0px;
+            outline: none;
+            background: #003366;
+        }
+    </style>
 
-    <ul>
-        <li>
-            <a href="{{ path('evenement_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('evenement_edit', { 'id': evenement.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="why" style="    padding: 6em 0px;">
+        <div class="container">
+            <div class="why-top heading">
+                <h3>{{ evenement.nomEvenement }}</h3>
+                <p>{{ evenement.description }}.</p>
+            </div>
+            <div class="why-bottom">
+                <div class="col-md-7 why-left">
+                    <div class="why-1">
+                        <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                        <div class="why-text">
+                            <h4>Theme : {{ evenement.theme.nom }}</h4>
+                            <p>{{ evenement.theme.description }}.</p>
+                        </div>
+                    </div>
+                    <div class="why-2">
+                        <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+                        <div class="why-text">
+                            <h4>Date D'evenement : </h4>
+                            <p>{{ evenement.date | date('Y-m-d')  }}</p>
+                        </div>
+                    </div>
+                    <div class="why-2">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        <div class="why-text">
+                            <h4>Nombre De Participant</h4>
+                            <p>{{ evenement.nbDeParticipants }}.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 why-right">
+                    <img src="{{asset('uploads/images/evenement/')}}{{ evenement.image }}" alt="" class="img-event" />
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="letter" style="    padding: 6em 0px;">
+        <div class="container">
+            <div class="letter-top heading">
+                <h3>Participate To Event</h3>
+                <div class="letter-bottom">
+                    <a href="{{ path('participation_new',{'id':evenement.id}) }}">Participate</a>
+                </div>
+            </div>
+            <div class="letter-top heading">
+                <h3>Or Share  Event on :</h3>
+                <div class="letter-bottom">
+                    {{ socialButtons(  ) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="clearfix"> </div>
+
 {% endblock %}

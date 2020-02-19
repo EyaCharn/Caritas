@@ -1,7 +1,12 @@
 {% extends 'Back/Back.html.twig' %}
 
 {% block content %}
-    <div class="container">
+    <div class="container">*
+        <form method="post">
+            <input type="number" name="idc" placeholder="id reclamation" class="form-control">
+            <br>
+            <input type="submit" value="search" class="btn btn-primary">
+        </form>
         <h2>Reclamation Table</h2>
 
         <table class="table">

@@ -2,7 +2,9 @@
 
 namespace EvenementBundle\Controller;
 
+use EvenementBundle\Entity\evenement;
 use EvenementBundle\Entity\participation;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -34,27 +36,29 @@ class participationController extends Controller
     /**
      * Creates a new participation entity.
      *
-     * @Route("/new", name="participation_new")
-     * @Method({"GET", "POST"})
+     * @Route("/new/{id}", name="participation_new")
+     * @IsGranted("IS_AUTHENTICATED_FULLY")
      */
-    public function newAction(Request $request)
+    public function newAction(evenement $evenement)
     {
-        $participation = new Participation();
-        $form = $this->createForm('EvenementBundle\Form\participationType', $participation);
-        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+        $par = $em->getRepository('EvenementBundle:participation')->findOneBy(array('idUtilisateur'=>$user->getId(),'idEvent'=>$evenement->getId()));
+        if(!$par){
+            $participation = new Participation();
+            $evenement->setNbDeParticipants($evenement->getNbDeParticipants()+1);
+            $participation->setIdEvent($evenement);
+            $participation->setIdUtilisateur($user);
             $em->persist($participation);
+            $em->persist($evenement);
             $em->flush();
+            $this->addFlash('success', 'You Participate to the Event : '.$evenement->getNomEvenement());
 
-            return $this->redirectToRoute('participation_show', array('id' => $participation->getId()));
+        }else{
+            $this->addFlash('warning', 'You Already Participated to the Event : '.$evenement->getNomEvenement());
         }
-
-        return $this->render('participation/new.html.twig', array(
-            'participation' => $participation,
-            'form' => $form->createView(),
-        ));
+        return $this->redirectToRoute('evenement_calender');
     }
 
     /**

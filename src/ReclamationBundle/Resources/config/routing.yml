@@ -1,3 +1,6 @@
 reclamation_homepage:
     path:     /
     defaults: { _controller: ReclamationBundle:Default:index }
+stat:
+    path:     /reclamation/stats
+    defaults: { _controller: ReclamationBundle:Reclamation:stat }
