@@ -8,6 +8,11 @@ imports:
     - { resource: "@ServiceBundle/Resources/config/services.yml"}
     - { resource: "@ReclamationBundle/Resources/config/services.yml" }
     - { resource: "@PubliciteBundle/Resources/config/services.yml" }
+    - { resource: "@FormationBundle/Resources/config/services.yml" }
+    - { resource: "@EmploiBundle/Resources/config/services.yml" }
+    - { resource: "@FormateurBundle/Resources/config/services.yml" }
+
+
 
 
 

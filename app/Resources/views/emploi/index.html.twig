@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Emplois list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Poste</th>
+                <th>Lieu</th>
+                <th>Numero</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for emploi in emplois %}
+            <tr>
+                <td><a href="{{ path('emploi_show', { 'id': emploi.id }) }}">{{ emploi.id }}</a></td>
+                <td>{{ emploi.image }}</td>
+                <td>{{ emploi.poste }}</td>
+                <td>{{ emploi.lieu }}</td>
+                <td>{{ emploi.numero }}</td>
+                <td>{{ emploi.email }}</td>
+                <td>{{ emploi.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('emploi_show', { 'id': emploi.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('emploi_edit', { 'id': emploi.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('emploi_new') }}">Create a new emploi</a>
+        </li>
+    </ul>
+{% endblock %}

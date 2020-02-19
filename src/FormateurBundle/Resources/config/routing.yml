@@ -1,0 +1,3 @@
+formateur_homepage:
+    path:     /
+    defaults: { _controller: FormateurBundle:Default:index }

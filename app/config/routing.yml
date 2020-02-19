@@ -1,3 +1,28 @@
+formateur_formateur:
+    resource: "@FormateurBundle/Controller/FormateurController.php"
+    type:     annotation
+
+formateur:
+    resource: "@FormateurBundle/Resources/config/routing.yml"
+    prefix:   /
+
+emploi_emploi:
+    resource: "@EmploiBundle/Controller/EmploiController.php"
+    type:     annotation
+
+emploi:
+    resource: "@EmploiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+formation_formation:
+    resource: "@FormationBundle/Controller/FormationController.php"
+    type:     annotation
+
+formation:
+    resource: "@FormationBundle/Resources/config/routing.yml"
+    prefix:   /
+
 publicite_publicite:
     resource: "@PubliciteBundle/Controller/PubliciteController.php"
     type:     annotation

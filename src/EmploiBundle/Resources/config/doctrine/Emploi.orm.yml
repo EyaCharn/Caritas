@@ -1,0 +1,28 @@
+EmploiBundle\Entity\Emploi:
+    type: entity
+    table: null
+    repositoryClass: EmploiBundle\Repository\EmploiRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        image:
+            type: blob
+        poste:
+            type: string
+            length: 255
+        lieu:
+            type: string
+            length: 255
+        numero:
+            type: integer
+        email:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: '2500'
+    lifecycleCallbacks: {  }

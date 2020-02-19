@@ -1,0 +1,29 @@
+FormationBundle\Entity\Formation:
+    type: entity
+    table: null
+    repositoryClass: FormationBundle\Repository\FormationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        image:
+            type: string
+            length: 255
+        titre:
+            type: string
+            length: 255
+        formateur:
+            type: string
+            length: 255
+        date:
+            type: date
+        lieu:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: '2500'
+    lifecycleCallbacks: {  }

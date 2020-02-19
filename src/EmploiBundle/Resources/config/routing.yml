@@ -1,0 +1,3 @@
+emploi_homepage:
+    path:     /
+    defaults: { _controller: EmploiBundle:Default:index }

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Formateurs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Numero</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for formateur in formateurs %}
+            <tr>
+                <td><a href="{{ path('formateur_show', { 'id': formateur.id }) }}">{{ formateur.id }}</a></td>
+                <td>{{ formateur.image }}</td>
+                <td>{{ formateur.nom }}</td>
+                <td>{{ formateur.prenom }}</td>
+                <td>{{ formateur.numero }}</td>
+                <td>{{ formateur.email }}</td>
+                <td>{{ formateur.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('formateur_show', { 'id': formateur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('formateur_edit', { 'id': formateur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('formateur_new') }}">Create a new formateur</a>
+        </li>
+    </ul>
+{% endblock %}
