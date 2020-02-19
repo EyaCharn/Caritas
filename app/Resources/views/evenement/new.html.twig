@@ -1,16 +1,69 @@
-{% extends ':Back:Back.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 {% block content %}
+    <section class="content">
 
-    <h1>Evenement creation</h1>
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Evenement creation</h3>
+            </div>
+            <div class="card-body">
+                {{ form_start(form) }}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nom : </label>
+                    {% if form.nomEvenement.vars.valid==true %}
+                        {{ form_widget(form.nomEvenement, { 'attr': {'class': 'form-control','row':'1'} }) }}
+                    {% else %}
+                        {{ form_widget(form.nomEvenement, { 'attr': {'class': 'form-control is-invalid','row':'1'} }) }}
+                    {% endif %}
+                   <span class="error invalid-feedback">{{ form_errors(form.nomEvenement) }}</span>
+                </div>
+                <div class="form-group">
+                    <label >Description : </label>
+                    {% if form.description.vars.valid==true %}
+                        {{ form_widget(form.description, { 'attr': {'class': 'form-control','row':'7'} }) }}
+                    {% else %}
+                            {{ form_widget(form.description, { 'attr': {'class': 'form-control is-invalid','row':'7'} }) }}
+                    {% endif %}
+                    <span class="error invalid-feedback">{{ form_errors(form.description) }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Theme : </label>
+                    {% if form.theme.vars.valid==true %}
+                        {{ form_widget(form.theme, { 'attr': {'class': 'form-control','row':'7'} }) }}
+                    {% else %}
+                        {{ form_widget(form.theme, { 'attr': {'class': 'form-control is-invalid','row':'7'} }) }}
+                    {% endif %}
+                    <span class="error invalid-feedback">{{ form_errors(form.theme) }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Image : </label>
+                    {% if form.image.vars.valid==true %}
+                        {{ form_widget(form.image, { 'attr': {'class': 'form-control'} }) }}
+                    {% else %}
+                        {{ form_widget(form.image, { 'attr': {'class': 'form-control is-invalid'} }) }}
+                    {% endif %}
+                    <span class="error invalid-feedback">{{ form_errors(form.image) }}</span>
+                </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('evenement_index') }}">Back to the list</a>
-        </li>
-    </ul>
+                <div class="form-group">
+                    <label for="exampleInputFile">Date : </label>
+                    {% if form.date.vars.valid==true %}
+                        {{ form_widget(form.date, { 'attr': {'class': 'form-control'} }) }}
+                    {% else %}
+                        {{ form_widget(form.date, { 'attr': {'class': 'form-control is-invalid'} }) }}
+                    {% endif %}
+                    <span class="error invalid-feedback">{{ form_errors(form.date) }}</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+            {{ form_end(form) }}
 
+        </div>
+        <!-- /.card -->
+
+    </section>
 {% endblock %}
+

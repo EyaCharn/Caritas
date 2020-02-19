@@ -56,4 +56,6 @@ class DefaultController extends Controller
         return $this->render('@Solidarity/Default/hebergement.html.twig');
     }
 
+
+
 }

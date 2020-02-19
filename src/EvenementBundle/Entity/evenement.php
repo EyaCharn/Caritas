@@ -3,7 +3,7 @@
 namespace EvenementBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * evenement
  *
@@ -25,15 +25,46 @@ class evenement
      * @var string
      *
      * @ORM\Column(name="NomEvenement", type="string", length=255)
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *      min = 5,
+     *      max = 255,
+     *      minMessage = "Name must be at least {{ limit }} characters long",
+     *      maxMessage = "Name cannot be longer than {{ limit }} characters"
+     * )
      */
     private $nomEvenement;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Theme")
+     * @ORM\JoinColumn(name="id_theme",referencedColumnName="id")
+     */
+    private $id_theme;
+
+    /**
      * @var string
      *
-     * @ORM\Column(name="Theme", type="string", length=255)
+     * @ORM\Column(name="image", type="string", length=255)
+     * @Assert\Image
      */
-    private $theme;
+    private $image;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=2500)
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *      min = 5,
+     *      max = 2500,
+     *      minMessage = "Description must be at least {{ limit }} characters long",
+     *      maxMessage = "Description cannot be longer than {{ limit }} characters"
+     * )
+     */
+    private $description;
+
+
 
     /**
      * @var int
@@ -46,8 +77,53 @@ class evenement
      * @var \DateTime
      *
      * @ORM\Column(name="Date", type="date")
+     * @Assert\Date
+     * @Assert\Range(
+     *      min = "now",
+     *      max = "+366 days"
+     * )
      */
     private $date;
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+
+    /**
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+
+
+
+
+
+
 
 
     /**
@@ -91,9 +167,9 @@ class evenement
      *
      * @return evenement
      */
-    public function setTheme($theme)
+    public function setTheme($id_theme)
     {
-        $this->theme = $theme;
+        $this->id_theme = $id_theme;
 
         return $this;
     }
@@ -105,7 +181,7 @@ class evenement
      */
     public function getTheme()
     {
-        return $this->theme;
+        return $this->id_theme;
     }
 
     /**

@@ -22,11 +22,11 @@ class AppKernel extends Kernel
             new EvenementBundle\EvenementBundle(),
             new ActualiteBundle\ActualiteBundle(),
             new ServiceBundle\ServiceBundle(),
-            new ReclamationBundle\ReclamationBundle()
-            new FormationBundle\FormationBundle(),
-            new OffreemploiBundle\OffreemploiBundle(),
             new ReclamationBundle\ReclamationBundle(),
             new PubliciteBundle\PubliciteBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Nomaya\SocialBundle\NomayaSocialBundle(),
+            new AncaRebeca\FullCalendarBundle\FullCalendarBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

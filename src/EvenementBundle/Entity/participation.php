@@ -22,16 +22,14 @@ class participation
     private $id;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="idEvent", type="integer")
+     * @ORM\ManyToOne(targetEntity="evenement")
+     * @ORM\JoinColumn(name="idEvent",referencedColumnName="id")
      */
     private $idEvent;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="idUtilisateur", type="integer")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
+     * @ORM\JoinColumn(name="idUtilisateur",referencedColumnName="id")
      */
     private $idUtilisateur;
 
@@ -46,13 +44,7 @@ class participation
         return $this->id;
     }
 
-    /**
-     * Set idEvent
-     *
-     * @param integer $idEvent
-     *
-     * @return participation
-     */
+
     public function setIdEvent($idEvent)
     {
         $this->idEvent = $idEvent;
@@ -60,23 +52,13 @@ class participation
         return $this;
     }
 
-    /**
-     * Get idEvent
-     *
-     * @return int
-     */
+
     public function getIdEvent()
     {
         return $this->idEvent;
     }
 
-    /**
-     * Set idUtilisateur
-     *
-     * @param integer $idUtilisateur
-     *
-     * @return participation
-     */
+
     public function setIdUtilisateur($idUtilisateur)
     {
         $this->idUtilisateur = $idUtilisateur;
@@ -84,11 +66,7 @@ class participation
         return $this;
     }
 
-    /**
-     * Get idUtilisateur
-     *
-     * @return int
-     */
+
     public function getIdUtilisateur()
     {
         return $this->idUtilisateur;

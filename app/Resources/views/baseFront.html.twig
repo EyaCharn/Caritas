@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+
+    <link href="{{ asset('FrontEnd/css/bootstrap.css') }}" rel='stylesheet' />
+    <link href="{{ asset('FrontEnd/css/style.css') }}" rel='stylesheet'  />
+    <link rel="stylesheet" href="{{ asset('FrontEnd/css/flexslider.css') }}"  />
+
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+
+
+
+<body>
+{% block body %}
+
+    {% block header %}
+        <div class="header">
+            <div class="container">
+                <div class="header-main">
+                    <div class="logo">
+                        <a href="index.html"><h1>CARITAS</h1></a>
+                    </div>
+                    <div class="head-right">
+                        <div class="top-nav">
+                            <span class="menu"><img src="{{ asset('FrontEnd/images/nav-icon.png') }}" alt=""> </span>
+                            <ul>
+                                <li><a href="index.html"  class="active"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                                <li><a href="{{path('main_about')}}"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
+                                <li><a href="{{path('main_gallery')}}"><span class="glyphicon glyphicon-picture"></span>Gallery</a></li>
+                                <li><a href="{{path('main_contact')}}"><span class="glyphicon glyphicon-envelope"></span>Contact</a></li>
+                                <li><a href="{{path('evenement_indexfront')}}"><span class="glyphicon glyphicon-envelope"></span>Evenement</a></li>
+
+                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                    <li><a href="{{path('evenement_calender')}}"><span class="glyphicon glyphicon-envelope"></span>Mes Participation</a></li>
+                                {% if is_granted("ROLE_ADMIN") %}
+                                    <li><a href="{{path('evenement_index')}}"><span class="glyphicon glyphicon-envelope"></span>Espace Admin</a></li>
+                                    {% endif %}
+                                    <li><a href="{{path('fos_user_security_logout')}}"><span class="glyphicon glyphicon-log-out"></span>logout</a></li>
+                                {% else %}
+                                    <li><a href="{{path('fos_user_security_login')}}"><span class="glyphicon glyphicon-log-in"></span>login</a></li>
+                                    <li><a href="{{path('fos_user_registration_register')}}"><span class="glyphicon glyphicon-registration-mark"></span>register</a></li>
+                                {% endif %}
+                                <div class="clearfix"> </div>
+                            </ul>
+                            <!--script-->
+                            <script>
+                                $("span.menu").click(function(){
+                                    $(".top-nav ul").slideToggle(500, function(){
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+    {% if app.request.hasPreviousSession %}
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="alert alert-{{ type }}" role="alert">
+                    <strong>{{ type }}</strong> {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    {% block footer %}
+        <div class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <a href="index.html"><h3>CARITAS</h3></a>
+                    <p>© 2020 CARITAS. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                    <a href="#home" class="scroll"><img src="{{ asset('FrontEnd/images/top-arrow.png') }}" alt="" /></a>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+{% endblock %}
+
+
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+        </script>
+        <script src="{{ asset('FrontEnd/js/jquery.min.js') }}"></script>
+        <!--start-smoth-scrolling-->
+        <script type="text/javascript" src="{{ asset('FrontEnd/js/move-top.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('FrontEnd/js/easing.js') }}"></script>
+        <script defer src="{{ asset('FrontEnd/js/jquery.flexslider.js') }}"></script>
+        <script>
+            $("span.menu").click(function(){
+                $(".top-nav ul").slideToggle(500, function(){
+                });
+            });
+        </script>
+        <script defer src="{{ 'FrontEnd/js/jquery.flexslider.js' }}"></script>
+        <script type="text/javascript">
+            $(window).load(function(){
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    start: function(slider){
+                        $('body').removeClass('loading');
+                    }
+                });
+            });
+        </script>
+{% block javascripts %}
+{% endblock %}
+
+</body>
+</html>

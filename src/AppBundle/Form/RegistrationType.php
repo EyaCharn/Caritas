@@ -35,13 +35,14 @@ class RegistrationType extends AbstractType
                     'admin' => 'ROLE_ADMIN',
                     'refugie' => 'ROLE_REFUGIE'
                 )));
-
         //roles field data transformer
         $builder->get('roles')
             ->addModelTransformer(new CallbackTransformer(
                 function ($rolesArray) {
                     // transform the array to a string
-                    return count($rolesArray)? $rolesArray[0]: null;
+                   // return implode('', $rolesArray);
+                    //return count($rolesArray)? $rolesArray[0]: '';
+                    return '';
                 },
                 function ($rolesString) {
                     // transform the string back to an array

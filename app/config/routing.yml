@@ -14,9 +14,13 @@ evenement_evenement:
     resource: "@EvenementBundle/Controller/evenementController.php"
     type:     annotation
 
+evenement_theme:
+    resource: "@EvenementBundle/Controller/ThemeController.php"
+    type:     annotation
+
 evenement:
     resource: "@EvenementBundle/Resources/config/routing.yml"
-    prefix:   /evenement
+    prefix:   /
 
 
 
@@ -72,3 +76,5 @@ fos_user_registration_confirmed:
     defaults:
         _controller: FrameworkBundle:Redirect:urlRedirect
         path: /
+ancarebeca_fullcalendar:
+    resource: "@FullCalendarBundle/Resources/config/routing.yml"

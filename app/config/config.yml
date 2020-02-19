@@ -18,6 +18,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    evenement_images: '%Kernel.project_dir%/web/uploads/images/evenement'
 
 framework:
     #esi: ~
@@ -94,3 +95,28 @@ fos_user:
     registration:
         form:
             type: AppBundle\Form\RegistrationType
+nomaya_social:
+    buttons:
+        facebook:
+            url:            "https://www.facebook.com/kk"
+            locale:         "fr"
+            send:           false
+            width:          300
+            showFaces:      false
+            layout:         "button_count"
+        twitter:
+            url:            null
+            locale:         "fr"
+            message:        "Je veux partager ça avec vous"
+            text:           "Tweet"
+            via:            "L'Equipe cartedevisitevirtuelle.fr"
+            tag:            "ttot"
+        linkedin:
+            url:            null
+            locale:         "fr_FR"
+            counter:        "right"
+        pinterest:
+            url:            null
+    links:
+        facebook:           "https://www.facebook.com/hadil.okkez"
+    theme:                  'default' # optional

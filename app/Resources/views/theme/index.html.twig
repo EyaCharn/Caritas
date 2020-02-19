@@ -7,7 +7,7 @@
                 <!-- /.card -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Livre list</h3>
+                        <h3 class="card-title">Themes list</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -15,27 +15,19 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Image</th>
-                                <th>Nomevenement</th>
-                                <th>Theme</th>
-                                <th>Nbdeparticipants</th>
-                                <th>Date</th>
+                                <th>Nom</th>
+                                <th>Discreption</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
                             <tbody>
-                            {% for evenement in evenements %}
+                            {% for theme in themes %}
                                 <tr>
-                                    <td>{{ evenement.id }}</td>
-                                    <td class="patient-img sorting_1" style=" width: 40px; height: 40px">
-                                        <img src="{{ asset('/uploads/images/evenement/') }}{{ evenement.image }}"  style=" width: 80px; height: 80px" alt="">
-                                    </td>
-                                    <td>{{ evenement.nomEvenement }}</td>
-                                    <td>{{ evenement.theme.nom }}</td>
-                                    <td>{{ evenement.nbDeParticipants }}</td>
-                                    <td>{% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %}</td>
+                                    <td>{{ theme.id }}</td>
+                                    <td>{{ theme.nom }}</td>
+                                    <td>{{ theme.description }}</td>
                                     <td>
-                                        <a href="{{ path('evenement_edit', { 'id': evenement.id }) }}" class="badge bg-warning">Edit</a>
+                                        <a href="{{ path('theme_edit', { 'id': theme.id }) }}" class="badge bg-warning">Edit</a>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -43,11 +35,8 @@
                             <tfoot>
                             <tr>
                                 <th>Id</th>
-                                <th>Image</th>
-                                <th>Nomevenement</th>
-                                <th>Theme</th>
-                                <th>Nbdeparticipants</th>
-                                <th>Date</th>
+                                <th>Nom</th>
+                                <th>Discreption</th>
                                 <th>Actions</th>
                             </tr>
                             </tfoot>
@@ -64,8 +53,8 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="{{ asset("back/plugins/datatables/jquery.dataTables.js") }}"></script>
-    <script src="{{ asset("back/plugins/datatables-bs4/js/dataTables.bootstrap4.js") }}"></script>
+    <script src="{{ asset("BackEnd/plugins/datatables/jquery.dataTables.js") }}"></script>
+    <script src="{{ asset("BackEnd/plugins/datatables-bs4/js/dataTables.bootstrap4.js") }}"></script>
     <!-- page script -->
     <script>
         $(function () {

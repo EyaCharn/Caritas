@@ -1,0 +1,25 @@
+evenement_homepage:
+    path:     /
+    defaults: { _controller: EvenementBundle:Default:index }
+solidarity_homepage:
+    path:     /
+    defaults: { _controller: SolidarityBundle:Default:index }
+main_homepageback:
+    path:     /IndexBack
+    defaults: { _controller: SolidarityBundle:Default:indexBack }
+
+main_homepagefront:
+    path:     /Indexfront
+    defaults: { _controller: SolidarityBundle:Default:indexfront }
+main_inscriptionfront:
+    path:     /inscription
+    defaults: { _controller: SolidarityBundle:Default:inscription }
+main_about:
+    path:     /about
+    defaults: { _controller: SolidarityBundle:Default:about }
+main_gallery:
+    path:     /gallery
+    defaults: { _controller: SolidarityBundle:Default:gallery }
+main_contact:
+    path:     /contact
+    defaults: { _controller: SolidarityBundle:Default:contact }

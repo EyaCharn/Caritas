@@ -1,0 +1,252 @@
+{% extends 'baseFront.html.twig' %}
+
+
+{% block stylesheets %}
+    <style>
+    @media (min-width: 1670px) {
+    .container {
+    width: 1670px;
+    }
+    }
+        .img-event {
+            display: block;
+            max-width:270px;
+            max-height:270px;
+            width: 270px;
+            height: 270px;"
+        }
+    </style>
+    <script src="{{ asset('FrontEnd/js/jquery-2.2.4.min.js')}}"></script>
+    <script src="{{ asset('FrontEnd/js/jquery-ui.min.js')}}"></script>
+    <script src="{{ asset('FrontEnd/js/bootstrap.min.js')}}"></script>
+    <!-- JS | jquery plugin collection for this theme -->
+    <script src="{{ asset('FrontEnd/js/jquery-plugin-collection.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="pages">
+        <div class="container">
+            <div class="col-md-3">
+                <div class="sidebar sidebar-right mt-sm-30">
+                    <form>
+                        <div class="widget">
+                            <h5 class="widget-title line-bottom">Search box</h5>
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <input type="text" id="search" onkeypress="filter()" placeholder="Click to Search" class="form-control search-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget">
+                            <h5 class="widget-title line-bottom">Theme </h5>
+                            <div class="categories">
+                                <style>
+                                    /* The container */
+                                    .container2 {
+                                        display: block;
+                                        position: relative;
+                                        padding-left: 35px;
+                                        margin-bottom: 12px;
+                                        cursor: pointer;
+                                        font-size: 22px;
+                                        -webkit-user-select: none;
+                                        -moz-user-select: none;
+                                        -ms-user-select: none;
+                                        user-select: none;
+                                    }
+
+                                    /* Hide the browser's default checkbox */
+                                    .container2 input {
+                                        position: absolute;
+                                        opacity: 0;
+                                        cursor: pointer;
+                                    }
+
+                                    /* Create a custom checkbox */
+                                    .checkmark {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        height: 25px;
+                                        width: 25px;
+                                        background-color: #eee;
+                                    }
+
+                                    /* On mouse-over, add a grey background color */
+                                    .container2:hover input ~ .checkmark {
+                                        background-color: #ccc;
+                                    }
+
+                                    /* When the checkbox is checked, add a blue background */
+                                    .container2 input:checked ~ .checkmark {
+                                        background-color: #2196F3;
+                                    }
+
+                                    /* Create the checkmark/indicator (hidden when not checked) */
+                                    .checkmark:after {
+                                        content: "";
+                                        position: absolute;
+                                        display: none;
+                                    }
+
+                                    /* Show the checkmark when checked */
+                                    .container2 input:checked ~ .checkmark:after {
+                                        display: block;
+                                    }
+
+                                    /* Style the checkmark/indicator */
+                                    .container2 .checkmark:after {
+                                        left: 9px;
+                                        top: 5px;
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid white;
+                                        border-width: 0 3px 3px 0;
+                                        -webkit-transform: rotate(45deg);
+                                        -ms-transform: rotate(45deg);
+                                        transform: rotate(45deg);
+                                    }
+                                </style>
+                                <label class="container2">ALL
+                                    <input type="checkbox" onclick="check();filter();"  id="all" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                                {% for theme in themes %}
+                                <label class="container2">{{theme.nom |upper}}
+                                    <input type="checkbox"  onclick="check2();filter();" id="{{ theme.id }}" >
+                                    <span class="checkmark"></span>
+                                </label>
+                                {% endfor %}
+                            </div>
+                            <script>
+                                function check() {
+                                    if($('#all').is(':checked')){
+                                        {% for theme in themes %}
+                                        $('#{{ theme.id }}').prop('checked',false);
+                                        {% endfor %}
+                                    }
+                                }
+                                function check2() {
+                                    {% for theme in themes %}
+                                    if($('#{{ theme.id }}').is(':checked')){
+                                        $('#all').prop('checked',false);
+                                    }
+                                    {% endfor %}
+                                }
+                            </script>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-md-9">
+            <div class="headding">
+                <h3>List  Evenements</h3>
+            </div>
+            <div id="AllEvents">
+                {% for evenement in pagination %}
+                <div class="col-md-3 team-left wow bounceIn animated" data-wow-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+                    <a href="{{ path("evenement_show",{'id':evenement.id}) }}">
+                        <img  class="img-event" src="{{ asset('/uploads/images/evenement/') }}{{ evenement.image }}" alt="">
+                        <div class="captn">
+                            <h5>Date : {% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %}</h5>
+                            <p>Nombre De place : {{ evenement.nbDeParticipants }}</p>
+                        </div>
+                        <div class="team-text">
+                            <h4>{{ evenement.nomEvenement }}</h4>
+                            <p>{{ evenement.theme.nom  }}</p>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+                <div class="col-md-12" id="pagination">
+                    <center>
+                    {{ knp_pagination_render(pagination,'@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig') }}
+                    </center>
+                </div>
+            </div>
+                <div id="filtred" >
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        function filter() {
+            var themess = Array() ;
+            if($('#all').is(':checked')){
+                {%  for theme in themes %}
+                themess[themess.length]  =  {{theme.id}};
+                {% endfor %}
+            }
+            {%  for theme in themes %}
+            if($('#{{theme.id}}').is(':checked')){
+                themess[themess.length]  =  {{theme.id}};
+            }
+            {% endfor %}
+            var nom =$('#search').val();
+            var date =$('#aa').val();
+            var DATA  =  {'nom' : nom , 'themes': themess,'date':date};
+            console.log(DATA);
+            $.ajax({type:"POST",
+                    url: "{{ path('evenement_indexfront')}}"  ,
+                    data: DATA,
+                    success: function (data){
+                        if (data.length > 0){
+                            console.log(data);
+                            $('#pagination').remove();
+                            $("#AllEvents").remove();
+                            $("#filtred2").remove();
+                            $("#filtred").html("<div id='filtred2'></div>");
+                            $.each(data, function (k,el) {
+                                console.log(el);
+                                $("#filtred2").append(
+                                    " <div class='col-md-3 team-left wow bounceIn animated' data-wow-delay='.5s' style='visibility: visible; -webkit-animation-delay: .5s;'>" +
+                                    "<a href='/evenement/"+el.id+"'>"+
+                                    "<img  style='display: block;" +
+                                    "  max-width:260px;" +
+                                    "  max-height:250px;" +
+                                    "  width: 260px;" +
+                                    " height: 250px;'"+
+                                    " src='/uploads/images/evenement/"+el.image+
+                                    "'>" +
+                                    "<div class='captn'>"+
+                                    "<h5>Date : "+ new Date(el.date*1000)+"</h5>"+
+                                "<p>Nombre De place : "+ el.nbDeParticipants +"</p>"+
+                                "</div>"+
+                                "<div class='team-text'>"+
+                                    "<h4>"+ el.nomEvenement +"</h4>"+
+                                    "<p>"+ el.theme.nom  +"</p>"+
+                                    "</div>"+
+                                    "</a>"+
+                                   " </div>"
+                                );
+                            })}
+                        else {
+                            $("#AllEvents").remove();
+                            $("#filtred2").remove();
+                            $("#filtred").html("<div id='filtred2'></div>");
+                            $("#filtred2").append("<center><h5>No Events with specific filters</h5></center>")
+
+                        }
+
+                    }
+                }
+            );
+        }
+
+        $(function() {
+            var knp = new KnpPaginatorAjax();
+
+            knp.init({
+                'loadMoreText': 'Load More', //load more text
+                'loadingText': 'Loading..', //loading text
+                'elementsSelector': '#elements', //this is where the script will append and search results
+                'paginationSelector': 'ul.pagination', //pagination selector
+            });
+        });
+    </script>
+{% endblock %}
